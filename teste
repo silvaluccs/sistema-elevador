@@ -1,0 +1,194 @@
+module ElevadorControle(
+    input wire clk,                   // principal clock
+    input wire reset,                 // reset p reiniciar o sistema
+    input wire emergencia,            // botao de emergencia para reset do andar
+    input wire [3:0] chamadas,        // entradas das chaves para as chamadas do elevador
+    input wire entrada_pessoa,        // botao pra entrada de uma pessoa
+    input wire saida_pessoa,          // botao pra saida
+    output reg [6:0] display_andar,   // saida pra o display do andar atual
+    output reg [6:0] display_pessoas, // saida pra o display do numero de pessoas no elevador
+    output reg motor_up,              // saida para ativar o motor de subida
+    output reg motor_down,            // saida para ativar o motor de descida
+    output reg porta_aberta,          // mostra se a porta do elevador ta aberta
+    output reg alarme,                // indica se o alarme de capacidade maxima ta ativo
+    output reg led_porta,             // led indicador da porta do elevador
+    output reg [2:0] led_rgb          // led para o alarme de excesso de pessoas
+);
+
+    typedef enum reg [2:0] {
+        PARADO = 3'b000,              
+        SUBINDO = 3'b001,          
+        DESCENDO = 3'b010,
+        ABRINDO_PORTA = 3'b011,
+        FECHANDO_PORTA = 3'b100,
+        ALARME_CAPACIDADE = 3'b101
+    } estado_elevador_t;
+
+    // Variáveis de controle
+    reg [1:0] andar_atual;          // andar atual do elevador (0: terreo, 1: primeiro andar, 2: segundo andar, 3: terceiro andar)
+    reg [1:0] andar_destino;        // andar que o elevador vai
+    reg [1:0] num_pessoas;          // numero de pessoas no elevador
+    reg chamada_ativa;              // mostra se tem uma chamada ativa
+    estado_elevador_t estado;       // estado da maquina
+    reg [3:0] tempo;                // contador de temporizacao
+    reg [1:0] fila_chamadas [0:3];  // fila de chamadas
+    integer chamada_indice;         // indice da fila de chamadas
+
+    initial begin
+        chamada_indice = 0;
+    end
+
+    // chamadas do elevador
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            chamada_ativa <= 0;
+            andar_destino <= 2'b00;
+            chamada_indice <= 0;
+        end else if (emergencia) begin
+            andar_destino <= 2'b00;   // vai resetar o andar de destino p o terreo em caso de emergencia
+        end else begin
+            // verifica as chamadas feitas e adiciona na fila se tiver
+            if (chamadas[0]) fila_chamadas[chamada_indice++] <= 2'b00; // chamada para o terreo
+            if (chamadas[1]) fila_chamadas[chamada_indice++] <= 2'b01; // chamada para o primeiro andar
+            if (chamadas[2]) fila_chamadas[chamada_indice++] <= 2'b10; // chamada para o segundo andar
+            if (chamadas[3]) fila_chamadas[chamada_indice++] <= 2'b11; // chamada para o terceiro andar
+
+            if (chamada_indice > 0) begin
+                andar_destino <= fila_chamadas[0];
+                chamada_ativa <= 1;
+                // remove a primeira chamada da fila
+                for (integer i = 0; i < chamada_indice - 1; i = i + 1) begin
+                    fila_chamadas[i] <= fila_chamadas[i + 1];
+                end
+                chamada_indice <= chamada_indice - 1;
+            end else begin
+                chamada_ativa <= 0;
+            end
+        end
+    end
+
+    // controla a quantidade de pessoas no elevador
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            num_pessoas <= 2'b00;
+        end else begin
+            if (entrada_pessoa && num_pessoas < 3)
+                num_pessoas <= num_pessoas + 1;
+            else if (saida_pessoa && num_pessoas > 0)
+                num_pessoas <= num_pessoas - 1;
+        end
+    end
+
+    // andar atual
+    always @(*) begin
+        case (andar_atual)
+            2'b00: display_andar = 7'b1000000; // terreo
+            2'b01: display_andar = 7'b1111001; // primeiro andar
+            2'b10: display_andar = 7'b0100100; // segundo andar
+            2'b11: display_andar = 7'b0110000; // terceiro andar
+            default: display_andar = 7'b1111111; // sem nenhuma chamada
+        endcase
+    end
+
+    // controle do numero de pessoas
+    always @(*) begin
+        case (num_pessoas)
+            2'b00: display_pessoas = 7'b1000000; // sem ninguem
+            2'b01: display_pessoas = 7'b1111001; // uma pessoa
+            2'b10: display_pessoas = 7'b0100100; // duas pessoas
+            2'b11: display_pessoas = 7'b0110000; // tres pessoas
+            default: display_pessoas = 7'b1111111; // mostra erro
+        endcase
+    end
+
+    // controle principal do elevador
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            estado <= PARADO;
+            andar_atual <= 2'b00;
+            porta_aberta <= 0;
+            motor_up <= 0;
+            motor_down <= 0;
+            alarme <= 0;
+            led_rgb <= 3'b000;  // desliga o led rgb
+            tempo <= 0;
+        end else begin
+            led_porta <= porta_aberta;
+            led_rgb <= (num_pessoas > 3) ? 3'b100 : 3'b000; // led vermelhoi em caso de excesso de pessoas
+
+            case (estado)
+                PARADO: begin
+                    if (num_pessoas > 3) begin
+                        estado <= ALARME_CAPACIDADE;
+                    end else if (chamada_ativa) begin
+                        if (andar_destino > andar_atual) begin
+                            estado <= FECHANDO_PORTA;
+                            motor_up <= 1;
+                            motor_down <= 0;
+                        end else if (andar_destino < andar_atual) begin
+                            estado <= FECHANDO_PORTA;
+                            motor_up <= 0;
+                            motor_down <= 1;
+                        end else begin
+                            estado <= ABRINDO_PORTA;
+                        end
+                    end
+                end
+
+                FECHANDO_PORTA: begin
+                    if (tempo < 4) begin
+                        tempo <= tempo + 1;
+                        porta_aberta <= 0;
+                    end else begin
+                        tempo <= 0;
+                        if (andar_destino > andar_atual) begin
+                            estado <= SUBINDO;
+                        end else if (andar_destino < andar_atual) begin
+                            estado <= DESCENDO;
+                        end else begin
+                            estado <= ABRINDO_PORTA;
+                        end
+                    end
+                end
+
+                SUBINDO: begin
+                    if (andar_atual < andar_destino) begin
+                        andar_atual <= andar_atual + 1;
+                    end
+                    if (andar_atual == andar_destino) begin
+                        estado <= ABRINDO_PORTA;
+                        motor_up <= 0;
+                    end
+                end
+
+                DESCENDO: begin
+                    if (andar_atual > andar_destino) begin
+                        andar_atual <= andar_atual - 1;
+                    end
+                    if (andar_atual == andar_destino) begin
+                        estado <= ABRINDO_PORTA;
+                        motor_down <= 0;
+                    end
+                end
+
+                ABRINDO_PORTA: begin
+                    if (tempo < 4) begin
+                        tempo <= tempo + 1;
+                        porta_aberta <= 1;
+                    end else begin
+                        tempo <= 0;
+                        estado <= PARADO;
+                    end
+                end
+
+                ALARME_CAPACIDADE: begin
+                    alarme <= 1;
+                    if (num_pessoas <= 3) begin
+                        estado <= PARADO;
+                        alarme <= 0;
+                    end
+                end
+            endcase
+        end
+    end
+endmodule
