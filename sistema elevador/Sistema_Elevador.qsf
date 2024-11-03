@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY controle_andares
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:17:41  NOVEMBER 03, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -58,3 +58,21 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name VERILOG_FILE FF_d.v
 set_global_assignment -name VERILOG_FILE controle_andares.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VERILOG_FILE display_andar.v
+set_global_assignment -name VERILOG_FILE FF_jk.v
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name VERILOG_FILE divisor_frequencia.v
+set_location_assignment PIN_35 -to controleSubDes
+set_location_assignment PIN_90 -to a
+set_location_assignment PIN_70 -to b
+set_location_assignment PIN_41 -to c
+set_location_assignment PIN_98 -to d
+set_location_assignment PIN_100 -to e
+set_location_assignment PIN_92 -to f
+set_location_assignment PIN_39 -to g
+set_location_assignment PIN_96 -to p
+set_location_assignment PIN_12 -to clock_in
+set_location_assignment PIN_88 -to d1
+set_location_assignment PIN_66 -to d2
+set_location_assignment PIN_68 -to d3
+set_location_assignment PIN_37 -to d4

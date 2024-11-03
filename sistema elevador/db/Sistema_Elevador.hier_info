@@ -1,11 +1,265 @@
-|controle_andares
-andar[0] << proximoAndar[0].DB_MAX_OUTPUT_PORT_TYPE
-andar[1] << proximoAndar[1].DB_MAX_OUTPUT_PORT_TYPE
+|main
+clock_in => clock_in.IN1
+a << display_andar:displayAndar.port1
+b << display_andar:displayAndar.port2
+c << display_andar:displayAndar.port3
+d << display_andar:displayAndar.port4
+e << display_andar:displayAndar.port5
+f << display_andar:displayAndar.port6
+g << display_andar:displayAndar.port7
+p << <VCC>
+d1 << <GND>
+d2 << <VCC>
+d3 << <VCC>
+d4 << <VCC>
+controleSubDes => controleSubDes.IN1
+
+
+|main|divisor_frequencia:df
+clock_out <= FF_jk:FF_contador2.q
+clock_entrada => clock_entrada.IN1
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_jk26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_contador0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_contador1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|divisor_frequencia:df|FF_jk:FF_contador2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j => Mux0.IN3
+k => Mux0.IN4
+reset => q~reg0.ACLR
+clock => q~reg0.CLK
+
+
+|main|controle_andares:controlAndares
+andar[0] <= proximoAndar[0].DB_MAX_OUTPUT_PORT_TYPE
+andar[1] <= proximoAndar[1].DB_MAX_OUTPUT_PORT_TYPE
 controleSubidaDescida => controleSubidaDescida.IN1
 clock => clock.IN2
 
 
-|controle_andares|controle_proximo_andar:comb_3
+|main|controle_andares:controlAndares|controle_proximo_andar:comb_3
 proximoAndar[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 proximoAndar[1] <= Or1.DB_MAX_OUTPUT_PORT_TYPE
 andarAtual[0] => Xnor0.IN0
@@ -20,15 +274,34 @@ controleSubidaDescida => And2.IN1
 controleSubidaDescida => Xor0.IN1
 
 
-|controle_andares|FF_d:FlipFlop_Q1
+|main|controle_andares:controlAndares|FF_d:FlipFlop_Q1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
 
 
-|controle_andares|FF_d:FlipFlop_Q0
+|main|controle_andares:controlAndares|FF_d:FlipFlop_Q0
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
+
+
+|main|display_andar:displayAndar
+andar[0] => and1.IN0
+andar[0] => Or0.IN0
+andar[0] => e.DATAIN
+andar[0] => And0.IN0
+andar[0] => c.DATAIN
+andar[1] => Or0.IN1
+andar[1] => And0.IN1
+andar[1] => and1.IN1
+andar[1] => a.DATAIN
+a <= andar[1].DB_MAX_OUTPUT_PORT_TYPE
+b <= And0.DB_MAX_OUTPUT_PORT_TYPE
+c <= andar[0].DB_MAX_OUTPUT_PORT_TYPE
+d <= and1.DB_MAX_OUTPUT_PORT_TYPE
+e <= andar[0].DB_MAX_OUTPUT_PORT_TYPE
+f <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+g <= and1.DB_MAX_OUTPUT_PORT_TYPE
 
 
