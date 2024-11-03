@@ -1,0 +1,34 @@
+|controle_andares
+andar[0] << proximoAndar[0].DB_MAX_OUTPUT_PORT_TYPE
+andar[1] << proximoAndar[1].DB_MAX_OUTPUT_PORT_TYPE
+controleSubidaDescida => controleSubidaDescida.IN1
+clock => clock.IN2
+
+
+|controle_andares|controle_proximo_andar:comb_3
+proximoAndar[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+proximoAndar[1] <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+andarAtual[0] => Xnor0.IN0
+andarAtual[0] => And2.IN0
+andarAtual[0] => Xor0.IN0
+andarAtual[0] => And0.IN0
+andarAtual[1] => And1.IN1
+andarAtual[1] => And3.IN1
+controleSubidaDescida => And0.IN1
+controleSubidaDescida => Xnor0.IN1
+controleSubidaDescida => And2.IN1
+controleSubidaDescida => Xor0.IN1
+
+
+|controle_andares|FF_d:FlipFlop_Q1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|controle_andares|FF_d:FlipFlop_Q0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
