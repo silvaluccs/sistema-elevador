@@ -12,12 +12,6 @@
  // modulo responsavel por modificar o estado do elevador com base em uma chave para subida e descida
  controle_andares controlAndares(andar_atual, controleSubDes, clock_dividido);
  
- assign d1 = 1'b0;
- assign d2 = 1'b1;
- assign d3 = 1'b1;
- assign d4 = 1'b1;
- assign p = 1'b1;
- 
  // selecionando os displays
  assign d1 = 1'b0;
  assign d2 = 1'b1;
