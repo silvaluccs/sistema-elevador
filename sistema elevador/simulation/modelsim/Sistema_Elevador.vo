@@ -1,0 +1,174 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "11/03/2024 12:33:28"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module controle_andares (
+	andar,
+	controleSubidaDescida,
+	clock);
+output 	[1:0] andar;
+input 	controleSubidaDescida;
+input 	clock;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clock~combout ;
+wire \controleSubidaDescida~combout ;
+wire \FlipFlop_Q1|Q~regout ;
+wire \FlipFlop_Q0|Q~regout ;
+
+
+// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \clock~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clock~combout ),
+	.padio(clock));
+// synopsys translate_off
+defparam \clock~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_84,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \controleSubidaDescida~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\controleSubidaDescida~combout ),
+	.padio(controleSubidaDescida));
+// synopsys translate_off
+defparam \controleSubidaDescida~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X6_Y4_N6
+maxii_lcell \FlipFlop_Q1|Q (
+// Equation(s):
+// \FlipFlop_Q1|Q~regout  = DFFEAS((\controleSubidaDescida~combout  & (((\FlipFlop_Q1|Q~regout ) # (\FlipFlop_Q0|Q~regout )))) # (!\controleSubidaDescida~combout  & (((\FlipFlop_Q1|Q~regout  & \FlipFlop_Q0|Q~regout )))), GLOBAL(\clock~combout ), VCC, , , , , 
+// , )
+
+	.clk(\clock~combout ),
+	.dataa(\controleSubidaDescida~combout ),
+	.datab(vcc),
+	.datac(\FlipFlop_Q1|Q~regout ),
+	.datad(\FlipFlop_Q0|Q~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\FlipFlop_Q1|Q~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \FlipFlop_Q1|Q .lut_mask = "faa0";
+defparam \FlipFlop_Q1|Q .operation_mode = "normal";
+defparam \FlipFlop_Q1|Q .output_mode = "reg_only";
+defparam \FlipFlop_Q1|Q .register_cascade_mode = "off";
+defparam \FlipFlop_Q1|Q .sum_lutc_input = "datac";
+defparam \FlipFlop_Q1|Q .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y4_N1
+maxii_lcell \FlipFlop_Q0|Q (
+// Equation(s):
+// \FlipFlop_Q0|Q~regout  = DFFEAS((\controleSubidaDescida~combout  & (((\FlipFlop_Q1|Q~regout ) # (!\FlipFlop_Q0|Q~regout )))) # (!\controleSubidaDescida~combout  & (((\FlipFlop_Q1|Q~regout  & !\FlipFlop_Q0|Q~regout )))), GLOBAL(\clock~combout ), VCC, , , , 
+// , , )
+
+	.clk(\clock~combout ),
+	.dataa(\controleSubidaDescida~combout ),
+	.datab(vcc),
+	.datac(\FlipFlop_Q1|Q~regout ),
+	.datad(\FlipFlop_Q0|Q~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\FlipFlop_Q0|Q~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \FlipFlop_Q0|Q .lut_mask = "a0fa";
+defparam \FlipFlop_Q0|Q .operation_mode = "normal";
+defparam \FlipFlop_Q0|Q .output_mode = "reg_only";
+defparam \FlipFlop_Q0|Q .register_cascade_mode = "off";
+defparam \FlipFlop_Q0|Q .sum_lutc_input = "datac";
+defparam \FlipFlop_Q0|Q .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_82,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \andar[0]~I (
+	.datain(\FlipFlop_Q0|Q~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(andar[0]));
+// synopsys translate_off
+defparam \andar[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_83,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \andar[1]~I (
+	.datain(\FlipFlop_Q1|Q~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(andar[1]));
+// synopsys translate_off
+defparam \andar[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule
