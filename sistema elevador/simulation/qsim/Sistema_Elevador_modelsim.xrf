@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, /home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/FF_d.v
+source_file = 1, /home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/controle_andares.v
+source_file = 1, /home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/db/Sistema_Elevador.cbx.xml
+design_name = controle_andares
+instance = comp, \clock~I , clock, controle_andares, 1
+instance = comp, \controleSubidaDescida~I , controleSubidaDescida, controle_andares, 1
+instance = comp, \FlipFlop_Q1|Q , FlipFlop_Q1|Q, controle_andares, 1
+instance = comp, \FlipFlop_Q0|Q , FlipFlop_Q0|Q, controle_andares, 1
+instance = comp, \andar[0]~I , andar[0], controle_andares, 1
+instance = comp, \andar[1]~I , andar[1], controle_andares, 1
