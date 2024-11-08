@@ -77,8 +77,8 @@ GNDINT                       : 11        : gnd    :                   :         
 clock_in                     : 12        : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 14        :        :                   :         : 1         :                
-GND*                         : 15        :        :                   :         : 1         :                
-GND*                         : 16        :        :                   :         : 1         :                
+btn_sub                      : 15        : input  : 3.3-V LVTTL       :         : 1         : N              
+led_rgb[0]                   : 16        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 17        :        :                   :         : 1         :                
 GND*                         : 18        :        :                   :         : 1         :                
 GND*                         : 19        :        :                   :         : 1         :                
@@ -89,7 +89,7 @@ TDI                          : 23        : input  :                   :         
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
 GND*                         : 26        :        :                   :         : 1         :                
-GND*                         : 27        :        :                   :         : 1         :                
+btn_add                      : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 28        :        :                   :         : 1         :                
 GND*                         : 29        :        :                   :         : 1         :                
 GND*                         : 30        :        :                   :         : 1         :                
@@ -116,7 +116,7 @@ GND*                         : 50        :        :                   :         
 GND*                         : 51        :        :                   :         : 1         :                
 GND*                         : 52        :        :                   :         : 2         :                
 GND*                         : 53        :        :                   :         : 2         :                
-GND*                         : 54        :        :                   :         : 2         :                
+led_rgb[1]                   : 54        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 55        :        :                   :         : 2         :                
 GND*                         : 56        :        :                   :         : 2         :                
 GND*                         : 57        :        :                   :         : 2         :                
@@ -137,7 +137,7 @@ GND*                         : 71        :        :                   :         
 GND*                         : 72        :        :                   :         : 2         :                
 GND*                         : 73        :        :                   :         : 2         :                
 GND*                         : 74        :        :                   :         : 2         :                
-GND*                         : 75        :        :                   :         : 2         :                
+led_rgb[2]                   : 75        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 76        :        :                   :         : 2         :                
 GND*                         : 77        :        :                   :         : 2         :                
 GND*                         : 78        :        :                   :         : 2         :                

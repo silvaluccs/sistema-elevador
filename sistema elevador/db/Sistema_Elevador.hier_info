@@ -1,18 +1,23 @@
 |main
 clock_in => clock_in.IN1
-a << display_andar:displayAndar.port1
-b << display_andar:displayAndar.port2
-c << display_andar:displayAndar.port3
-d << display_andar:displayAndar.port4
-e << display_andar:displayAndar.port5
-f << display_andar:displayAndar.port6
-g << display_andar:displayAndar.port7
-p << <VCC>
-d1 << <GND>
-d2 << <VCC>
-d3 << <VCC>
-d4 << <VCC>
 controleSubDes => controleSubDes.IN1
+btn_add => btn_add.IN1
+btn_sub => btn_sub.IN1
+led_rgb[0] <= controle_capacidade:controleCapacidade.port1
+led_rgb[1] <= controle_capacidade:controleCapacidade.port1
+led_rgb[2] <= controle_capacidade:controleCapacidade.port1
+a <= display_andar:displayAndar.port1
+b <= display_andar:displayAndar.port2
+c <= display_andar:displayAndar.port3
+d <= display_andar:displayAndar.port4
+e <= display_andar:displayAndar.port5
+f <= display_andar:displayAndar.port6
+g <= display_andar:displayAndar.port7
+p <= <VCC>
+d1 <= <GND>
+d2 <= <VCC>
+d3 <= <VCC>
+d4 <= <VCC>
 
 
 |main|divisor_frequencia:df
@@ -284,6 +289,35 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
+
+
+|main|contagem_pessoas:contador
+btn_add => and_add.IN1
+btn_sub => and_sub.IN1
+clock => clock.IN2
+reset => ~NO_FANOUT~
+capacidade_atual[0] <= FF_d:FF0.port0
+capacidade_atual[1] <= FF_d:FF1.port0
+
+
+|main|contagem_pessoas:contador|FF_d:FF0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|main|contagem_pessoas:contador|FF_d:FF1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|main|controle_capacidade:controleCapacidade
+capacidade_atual[0] => and1.IN0
+capacidade_atual[1] => and1.IN1
+led_rgb[0] <= <GND>
+led_rgb[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+led_rgb[2] <= and1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|display_andar:displayAndar

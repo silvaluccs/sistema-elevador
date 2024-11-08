@@ -76,3 +76,5 @@ set_location_assignment PIN_88 -to d1
 set_location_assignment PIN_66 -to d2
 set_location_assignment PIN_68 -to d3
 set_location_assignment PIN_37 -to d4
+set_global_assignment -name VERILOG_FILE controle_capacidade.v
+set_global_assignment -name VERILOG_FILE contagem_pessoas.v
