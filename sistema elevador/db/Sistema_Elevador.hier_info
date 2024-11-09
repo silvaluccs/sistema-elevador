@@ -1,0 +1,60 @@
+|controle_andares
+andar[0] << proximoAndar[0].DB_MAX_OUTPUT_PORT_TYPE
+andar[1] << proximoAndar[1].DB_MAX_OUTPUT_PORT_TYPE
+seletor_andar[0] => seletor_andar[0].IN1
+seletor_andar[1] => seletor_andar[1].IN1
+clock_in => clock_in.IN1
+
+
+|controle_andares|comparador:comparar_andares
+G <= or1.DB_MAX_OUTPUT_PORT_TYPE
+L <= or3.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => and1.IN0
+x[0] => and4.IN0
+x[1] => and0.IN0
+x[1] => or0.IN0
+x[1] => and3.IN0
+x[1] => or2.IN0
+y[0] => and4.IN1
+y[0] => and1.IN1
+y[1] => and3.IN1
+y[1] => or2.IN1
+y[1] => and0.IN1
+y[1] => or0.IN1
+
+
+|controle_andares|mux_2x1:mux_para_clock
+a => and0.IN0
+b => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+out <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controle_andares|controle_proximo_andar:comb_5
+proximoAndar[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+proximoAndar[1] <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+andarAtual[0] => Xnor0.IN0
+andarAtual[0] => And2.IN0
+andarAtual[0] => Xor0.IN0
+andarAtual[0] => And0.IN0
+andarAtual[1] => And1.IN1
+andarAtual[1] => And3.IN1
+controleSubidaDescida => And0.IN1
+controleSubidaDescida => Xnor0.IN1
+controleSubidaDescida => And2.IN1
+controleSubidaDescida => Xor0.IN1
+
+
+|controle_andares|FF_d:FlipFlop_Q1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|controle_andares|FF_d:FlipFlop_Q0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
