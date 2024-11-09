@@ -8,50 +8,50 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/simulation/qsim
+d/home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/simulation/qsim
 vcontrole_andares
-Z1 !s110 1730648361
+Z0 !s110 1731157648
 !i10b 1
-!s100 4=`HY7a`Qo6V7f;aoi6<F0
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I;L6Vfk6=O=;4NH^[6HP671
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1730648360
+!s100 ?iHLlK9?:ekz4Z_A`V3^i3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ik;6gS_Ck^gCmWCf0oncPY0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-circuito-atualizado/sistema elevador/simulation/qsim
+w1731157646
 8Sistema_Elevador.vo
 FSistema_Elevador.vo
-!i122 0
-L0 32 143
+!i122 2
+L0 32 227
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1730648361.000000
+Z5 !s108 1731157648.000000
 !s107 Sistema_Elevador.vo|
 !s90 -work|work|Sistema_Elevador.vo|
 !i113 1
 Z6 o-work work
 Z7 tCvgOpt 0
 vcontrole_andares_vlg_vec_tst
-R1
-!i10b 1
-!s100 n2J<z<z7=Hc@nE?]e<S153
-R2
-I@FM=HM^HWWP1ZhHkE@<z>0
-R3
 R0
-w1730648358
-8Waveform.vwf.vt
-FWaveform.vwf.vt
-!i122 1
-L0 30 48
+!i10b 1
+!s100 MR>Uf`][6eMTXFhG3:oih1
+R1
+Igid=XHDcf;@<CRDcDaNDT3
+R2
+R3
+w1731157644
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 3
+L0 30 45
 R4
 r1
 !s85 0
 31
 R5
-!s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
 !i113 1
 R6
 R7

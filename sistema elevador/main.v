@@ -1,5 +1,6 @@
-module main(clock_in, controleSubDes, btn_add, btn_sub, led_rgb, a, b, c, d, e, f, g, p, d1, d2, d3, d4);
-    input clock_in, controleSubDes, btn_add, btn_sub;
+module main(clock_in, btn_add, btn_sub, led_rgb, chave1, chave0, a, b, c, d, e, f, g, p, d1, d2, d3, d4);
+    input chave1, chave0;
+	 input clock_in, btn_add, btn_sub;
     output [2:0] led_rgb;
     output a, b, c, d, e, f, g, p, d1, d2, d3, d4;
  
@@ -9,9 +10,12 @@ module main(clock_in, controleSubDes, btn_add, btn_sub, led_rgb, a, b, c, d, e, 
  divisor_frequencia df(clock_dividido, clock_in);
  
  wire [1:0] andar_atual;
+ wire [1:0] seletor_andar;
  
- // modulo responsavel por modificar o estado do elevador com base em uma chave para subida e descida
- controle_andares controlAndares(andar_atual, controleSubDes, clock_dividido);
+ assign seletor_andar = {chave1, chave0};
+ 
+ // modulo responsavel por modificar o estado do elevador com base em uma chave para selecionar o andar
+ controle_andares controlAndares(andar_atual, seletor_andar, clock_dividido);
  
  //modulo responsavel pela contagem de pessoas
  contagem_pessoas contador(

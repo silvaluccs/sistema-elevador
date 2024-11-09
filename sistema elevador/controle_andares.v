@@ -2,12 +2,23 @@
 Modulo responsavel pelo controle dos andares, subindo e descendo.
 */
 
-module controle_andares(andar, controleSubidaDescida, clock);
- input controleSubidaDescida, clock;
+module controle_andares(andar, seletor_andar, clock_in);
+ input clock_in;
+ input [1:0] seletor_andar;
  output [1:0] andar;
  
  wire [1:0] proximoAndar;
  wire [1:0] andarAtual;
+ 
+ wire G, L, controleSubidaDescida, nor_G_L, clock;
+ 
+ comparador comparar_andares(G, L, seletor_andar, proximoAndar);
+ 
+ assign controleSubidaDescida = G;
+ 
+ nor Nor0(nor_G_L, G, L);
+ 
+ mux_2x1 mux_para_clock(clock_in, 1'b0, nor_G_L, clock);
  
  controle_proximo_andar(andarAtual, proximoAndar, controleSubidaDescida);
  
