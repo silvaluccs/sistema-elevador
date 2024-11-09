@@ -80,3 +80,4 @@ set_global_assignment -name VERILOG_FILE controle_capacidade.v
 set_global_assignment -name VERILOG_FILE contagem_pessoas.v
 set_global_assignment -name VERILOG_FILE comparador.v
 set_global_assignment -name VERILOG_FILE mux_2x1.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
