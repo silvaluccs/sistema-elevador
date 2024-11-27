@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
-// DATE "11/09/2024 10:07:26"
+// DATE "11/27/2024 08:20:48"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -29,13 +29,17 @@
 
 `timescale 1 ps/ 1 ps
 
-module controle_andares (
-	andar,
-	seletor_andar,
-	clock_in);
-output 	[1:0] andar;
-input 	[1:0] seletor_andar;
-input 	clock_in;
+module contagem_pessoas_no_elevador (
+	clock,
+	botao_subir,
+	botao_descer,
+	alerta,
+	quantidade_pessoas);
+input 	clock;
+input 	botao_subir;
+input 	botao_descer;
+output 	alerta;
+output 	[1:0] quantidade_pessoas;
 
 // Design Ports Information
 
@@ -51,45 +55,54 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \FlipFlop_Q1|Q~regout ;
-wire \mux_para_clock|and0~0_combout ;
-wire \clock_in~combout ;
-wire \mux_para_clock|and0~combout ;
-wire \FlipFlop_Q0|Q~regout ;
-wire [1:0] \seletor_andar~combout ;
+wire \clock~combout ;
+wire \botao_descer~combout ;
+wire \botao_subir~combout ;
+wire \Y1|Q~regout ;
+wire \Y0|Q~regout ;
+wire \control_quant_pes|And5~0_combout ;
 
 
-// Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \seletor_andar[0]~I (
+// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \clock~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\seletor_andar~combout [0]),
-	.padio(seletor_andar[0]));
+	.combout(\clock~combout ),
+	.padio(clock));
 // synopsys translate_off
-defparam \seletor_andar[0]~I .operation_mode = "input";
+defparam \clock~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: PIN_8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \seletor_andar[1]~I (
+// Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \botao_descer~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\seletor_andar~combout [1]),
-	.padio(seletor_andar[1]));
+	.combout(\botao_descer~combout ),
+	.padio(botao_descer));
 // synopsys translate_off
-defparam \seletor_andar[1]~I .operation_mode = "input";
+defparam \botao_descer~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X2_Y3_N1
-maxii_lcell \FlipFlop_Q1|Q (
+// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \botao_subir~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\botao_subir~combout ),
+	.padio(botao_subir));
+// synopsys translate_off
+defparam \botao_subir~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X7_Y4_N4
+maxii_lcell \Y1|Q (
 // Equation(s):
-// \FlipFlop_Q1|Q~regout  = DFFEAS((\seletor_andar~combout [1] & ((\FlipFlop_Q0|Q~regout ) # ((\seletor_andar~combout [0] & \FlipFlop_Q1|Q~regout )))) # (!\seletor_andar~combout [1] & (((\FlipFlop_Q0|Q~regout  & \FlipFlop_Q1|Q~regout )))), 
-// GLOBAL(\mux_para_clock|and0~combout ), VCC, , , , , , )
+// \Y1|Q~regout  = DFFEAS((\botao_descer~combout  & (\Y1|Q~regout  & ((\botao_subir~combout ) # (\Y0|Q~regout )))) # (!\botao_descer~combout  & ((\Y1|Q~regout ) # ((\botao_subir~combout  & \Y0|Q~regout )))), GLOBAL(\clock~combout ), VCC, , , , , , )
 
-	.clk(\mux_para_clock|and0~combout ),
-	.dataa(\seletor_andar~combout [0]),
-	.datab(\seletor_andar~combout [1]),
-	.datac(\FlipFlop_Q0|Q~regout ),
-	.datad(\FlipFlop_Q1|Q~regout ),
+	.clk(\clock~combout ),
+	.dataa(\botao_descer~combout ),
+	.datab(\botao_subir~combout ),
+	.datac(\Y1|Q~regout ),
+	.datad(\Y0|Q~regout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -103,30 +116,30 @@ maxii_lcell \FlipFlop_Q1|Q (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\FlipFlop_Q1|Q~regout ),
+	.regout(\Y1|Q~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \FlipFlop_Q1|Q .lut_mask = "f8c0";
-defparam \FlipFlop_Q1|Q .operation_mode = "normal";
-defparam \FlipFlop_Q1|Q .output_mode = "reg_only";
-defparam \FlipFlop_Q1|Q .register_cascade_mode = "off";
-defparam \FlipFlop_Q1|Q .sum_lutc_input = "datac";
-defparam \FlipFlop_Q1|Q .synch_mode = "off";
+defparam \Y1|Q .lut_mask = "f4d0";
+defparam \Y1|Q .operation_mode = "normal";
+defparam \Y1|Q .output_mode = "reg_only";
+defparam \Y1|Q .register_cascade_mode = "off";
+defparam \Y1|Q .sum_lutc_input = "datac";
+defparam \Y1|Q .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X2_Y3_N9
-maxii_lcell \mux_para_clock|and0~0 (
+// Location: LC_X7_Y4_N3
+maxii_lcell \Y0|Q (
 // Equation(s):
-// \mux_para_clock|and0~0_combout  = (\FlipFlop_Q1|Q~regout  & ((\FlipFlop_Q0|Q~regout  $ (\seletor_andar~combout [0])) # (!\seletor_andar~combout [1]))) # (!\FlipFlop_Q1|Q~regout  & ((\seletor_andar~combout [1]) # (\FlipFlop_Q0|Q~regout  $ 
-// (\seletor_andar~combout [0]))))
+// \Y0|Q~regout  = DFFEAS((\botao_descer~combout  & ((\botao_subir~combout  & ((\Y0|Q~regout ))) # (!\botao_subir~combout  & (\Y1|Q~regout  & !\Y0|Q~regout )))) # (!\botao_descer~combout  & ((\botao_subir~combout  & ((\Y1|Q~regout ) # (!\Y0|Q~regout ))) # 
+// (!\botao_subir~combout  & ((\Y0|Q~regout ))))), GLOBAL(\clock~combout ), VCC, , , , , , )
 
-	.clk(gnd),
-	.dataa(\FlipFlop_Q1|Q~regout ),
-	.datab(\FlipFlop_Q0|Q~regout ),
-	.datac(\seletor_andar~combout [0]),
-	.datad(\seletor_andar~combout [1]),
+	.clk(\clock~combout ),
+	.dataa(\botao_descer~combout ),
+	.datab(\botao_subir~combout ),
+	.datac(\Y1|Q~regout ),
+	.datad(\Y0|Q~regout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -139,40 +152,30 @@ maxii_lcell \mux_para_clock|and0~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\mux_para_clock|and0~0_combout ),
-	.regout(),
+	.combout(),
+	.regout(\Y0|Q~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \mux_para_clock|and0~0 .lut_mask = "7dbe";
-defparam \mux_para_clock|and0~0 .operation_mode = "normal";
-defparam \mux_para_clock|and0~0 .output_mode = "comb_only";
-defparam \mux_para_clock|and0~0 .register_cascade_mode = "off";
-defparam \mux_para_clock|and0~0 .sum_lutc_input = "datac";
-defparam \mux_para_clock|and0~0 .synch_mode = "off";
+defparam \Y0|Q .lut_mask = "d964";
+defparam \Y0|Q .operation_mode = "normal";
+defparam \Y0|Q .output_mode = "reg_only";
+defparam \Y0|Q .register_cascade_mode = "off";
+defparam \Y0|Q .sum_lutc_input = "datac";
+defparam \Y0|Q .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \clock_in~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\clock_in~combout ),
-	.padio(clock_in));
-// synopsys translate_off
-defparam \clock_in~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X2_Y3_N6
-maxii_lcell \mux_para_clock|and0 (
+// Location: LC_X7_Y4_N8
+maxii_lcell \control_quant_pes|And5~0 (
 // Equation(s):
-// \mux_para_clock|and0~combout  = LCELL((((\mux_para_clock|and0~0_combout  & \clock_in~combout ))))
+// \control_quant_pes|And5~0_combout  = (\Y0|Q~regout  & (((\botao_subir~combout  & \Y1|Q~regout ))))
 
 	.clk(gnd),
-	.dataa(vcc),
+	.dataa(\Y0|Q~regout ),
 	.datab(vcc),
-	.datac(\mux_para_clock|and0~0_combout ),
-	.datad(\clock_in~combout ),
+	.datac(\botao_subir~combout ),
+	.datad(\Y1|Q~regout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -185,74 +188,48 @@ maxii_lcell \mux_para_clock|and0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\mux_para_clock|and0~combout ),
+	.combout(\control_quant_pes|And5~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \mux_para_clock|and0 .lut_mask = "f000";
-defparam \mux_para_clock|and0 .operation_mode = "normal";
-defparam \mux_para_clock|and0 .output_mode = "comb_only";
-defparam \mux_para_clock|and0 .register_cascade_mode = "off";
-defparam \mux_para_clock|and0 .sum_lutc_input = "datac";
-defparam \mux_para_clock|and0 .synch_mode = "off";
+defparam \control_quant_pes|And5~0 .lut_mask = "a000";
+defparam \control_quant_pes|And5~0 .operation_mode = "normal";
+defparam \control_quant_pes|And5~0 .output_mode = "comb_only";
+defparam \control_quant_pes|And5~0 .register_cascade_mode = "off";
+defparam \control_quant_pes|And5~0 .sum_lutc_input = "datac";
+defparam \control_quant_pes|And5~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X2_Y3_N4
-maxii_lcell \FlipFlop_Q0|Q (
-// Equation(s):
-// \FlipFlop_Q0|Q~regout  = DFFEAS((!\FlipFlop_Q0|Q~regout  & ((\seletor_andar~combout [0]) # ((\seletor_andar~combout [1]) # (\FlipFlop_Q1|Q~regout )))), GLOBAL(\mux_para_clock|and0~combout ), VCC, , , , , , )
-
-	.clk(\mux_para_clock|and0~combout ),
-	.dataa(\seletor_andar~combout [0]),
-	.datab(\seletor_andar~combout [1]),
-	.datac(\FlipFlop_Q0|Q~regout ),
-	.datad(\FlipFlop_Q1|Q~regout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(),
-	.regout(\FlipFlop_Q0|Q~regout ),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \FlipFlop_Q0|Q .lut_mask = "0f0e";
-defparam \FlipFlop_Q0|Q .operation_mode = "normal";
-defparam \FlipFlop_Q0|Q .output_mode = "reg_only";
-defparam \FlipFlop_Q0|Q .register_cascade_mode = "off";
-defparam \FlipFlop_Q0|Q .sum_lutc_input = "datac";
-defparam \FlipFlop_Q0|Q .synch_mode = "off";
-// synopsys translate_on
-
-// Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \andar[0]~I (
-	.datain(\FlipFlop_Q0|Q~regout ),
+// Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \alerta~I (
+	.datain(\control_quant_pes|And5~0_combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(andar[0]));
+	.padio(alerta));
 // synopsys translate_off
-defparam \andar[0]~I .operation_mode = "output";
+defparam \alerta~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \andar[1]~I (
-	.datain(\FlipFlop_Q1|Q~regout ),
+// Location: PIN_74,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \quantidade_pessoas[0]~I (
+	.datain(\Y0|Q~regout ),
 	.oe(vcc),
 	.combout(),
-	.padio(andar[1]));
+	.padio(quantidade_pessoas[0]));
 // synopsys translate_off
-defparam \andar[1]~I .operation_mode = "output";
+defparam \quantidade_pessoas[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \quantidade_pessoas[1]~I (
+	.datain(\Y1|Q~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(quantidade_pessoas[1]));
+// synopsys translate_off
+defparam \quantidade_pessoas[1]~I .operation_mode = "output";
 // synopsys translate_on
 
 endmodule

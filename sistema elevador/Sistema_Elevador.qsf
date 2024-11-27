@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY controle_andares
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:17:41  NOVEMBER 03, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -76,8 +76,12 @@ set_location_assignment PIN_88 -to d1
 set_location_assignment PIN_66 -to d2
 set_location_assignment PIN_68 -to d3
 set_location_assignment PIN_37 -to d4
-set_global_assignment -name VERILOG_FILE controle_capacidade.v
-set_global_assignment -name VERILOG_FILE contagem_pessoas.v
 set_global_assignment -name VERILOG_FILE comparador.v
 set_global_assignment -name VERILOG_FILE mux_2x1.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE tff.v
+set_global_assignment -name VERILOG_FILE debouce.v
+set_global_assignment -name VERILOG_FILE contagem_pessoas_no_elevador.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VERILOG_FILE display_pessoas.v
+set_global_assignment -name VERILOG_FILE gerenciar_display.v

@@ -9,49 +9,95 @@ z2
 !i10f 100
 cModel Technology
 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema elevador/simulation/qsim
-vcontrole_andares
-Z0 !s110 1731157648
+vcontagem_pessoas_no_elevador
+Z0 !s110 1732706449
 !i10b 1
-!s100 ?iHLlK9?:ekz4Z_A`V3^i3
+!s100 B]`154gEnoDlzU?HAJ;]h1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ik;6gS_Ck^gCmWCf0oncPY0
+ImQ]m7bS1l0UoSA_jinSWT2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-circuito-atualizado/sistema elevador/simulation/qsim
-w1731157646
-8Sistema_Elevador.vo
-FSistema_Elevador.vo
-!i122 2
-L0 32 227
-Z4 OV;L;2020.1;71
+Z3 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/simulation/qsim
+w1732706448
+Z4 8Sistema_Elevador.vo
+Z5 FSistema_Elevador.vo
+!i122 8
+L0 32 204
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1731157648.000000
-!s107 Sistema_Elevador.vo|
-!s90 -work|work|Sistema_Elevador.vo|
+Z7 !s108 1732706449.000000
+Z8 !s107 Sistema_Elevador.vo|
+Z9 !s90 -work|work|Sistema_Elevador.vo|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
-vcontrole_andares_vlg_vec_tst
+Z10 o-work work
+Z11 tCvgOpt 0
+vcontagem_pessoas_no_elevador_vlg_vec_tst
 R0
+!i10b 1
+!s100 F66o3G0VKnjb4MO0kGm7b2
+R1
+I10[9EQeeecEL0`lD9?jU[1
+R2
+R3
+w1732706446
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 9
+L0 30 88
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11
+vcontrole_andares
+Z12 !s110 1731157648
+!i10b 1
+!s100 ?iHLlK9?:ekz4Z_A`V3^i3
+R1
+Ik;6gS_Ck^gCmWCf0oncPY0
+R2
+Z13 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-circuito-atualizado/sistema elevador/simulation/qsim
+w1731157646
+R4
+R5
+!i122 2
+L0 32 227
+R6
+r1
+!s85 0
+31
+Z14 !s108 1731157648.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcontrole_andares_vlg_vec_tst
+R12
 !i10b 1
 !s100 MR>Uf`][6eMTXFhG3:oih1
 R1
 Igid=XHDcf;@<CRDcDaNDT3
 R2
-R3
+R13
 w1731157644
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
 !i122 3
 L0 30 45
-R4
+R6
 r1
 !s85 0
 31
-R5
+R14
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
-R6
-R7
+R10
+R11

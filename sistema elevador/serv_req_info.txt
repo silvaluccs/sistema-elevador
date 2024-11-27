@@ -1,0 +1,44 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x77f2f70e8be6: ccl_err + 0x7be6 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xd8)
+	0x77f2f70ebe95: ccl_err + 0xae95 (_Z14err_terminatorv + 0x5a)
+	0x77f304d69ae6: jtag_client + 0x82ae6 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x77f304d69b31: jtag_client + 0x82b31
+	0x77f304d69c38: jtag_client + 0x82c38
+	0x77f304d6b7af: jtag_client + 0x847af (_ZSt19__throw_logic_errorPKc + 0x3f)
+	0x77f304d6f48f: jtag_client + 0x8848f (_ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag + 0x1f)
+	0x77f304d6f876: jtag_client + 0x88876 (_ZNSsC1EPKcRKSaIcE + 0x36)
+	0x77f307ea5c14: synth_sgn + 0xa5c14 (_ZNK15SGN_PRIM_MAPPER28error_missing_primitive_portEPSt3mapIPKcP19MSG_LOCATION_SCHEMASt4lessIS2_ESaISt4pairIKS2_S4_EEES2_S2_ + 0x134)
+	0x77f307ea7198: synth_sgn + 0xa7198 (_ZNK15SGN_PRIM_MAPPER11process_tffEmP19CDB_SGATE_COMPONENTPKc17DB_PRIMITIVE_TYPE + 0x408)
+	0x77f307f2ec52: synth_sgn + 0x12ec52 (_ZNK15SGN_PRIM_MAPPER5startEmN15HDB_DESIGN_UNIT4TYPEE + 0x762)
+	0x77f307f50dea: synth_sgn + 0x150dea (_ZNK21SGN_NETLIST_PROCESSOR18initial_processingEmN15HDB_DESIGN_UNIT4TYPEE + 0x5a)
+	0x77f307f8194c: synth_sgn + 0x18194c (_ZNK10SGN_FN_LIB14start_vrf_flowEv + 0x6c)
+	0x77f307f8251d: synth_sgn + 0x18251d (_ZN10SGN_FN_LIB5startEP16SGN_WRAPPER_INFO + 0xb6d)
+	0x77f307f86f49: synth_sgn + 0x186f49 (_ZNK13SGN_EXTRACTOR24single_module_extractionEP17HDB_INSTANCE_NAMEP10HDB_ENTITYP16SGN_WRAPPER_INFO + 0x119)
+	0x77f307f8f6a1: synth_sgn + 0x18f6a1 (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0xf1)
+	0x77f307f908ae: synth_sgn + 0x1908ae (_ZN13SGN_EXTRACTOR36recurse_into_newly_extracted_netlistEP10HDB_ENTITYP17HDB_INSTANCE_NAMEmP16SGN_WRAPPER_INFO + 0x65e)
+	0x77f307f8f8cc: synth_sgn + 0x18f8cc (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x31c)
+	0x77f307f9b990: synth_sgn + 0x19b990 (_ZN13SGN_EXTRACTOR7extractEv + 0x2b0)
+	0x77f307fa5e91: synth_sgn + 0x1a5e91 (_Z8sgn_fullP10CMP_FACADE + 0xa1)
+	   0x419996: quartus_map + 0x19996 (_Z16qsyn_execute_sgnP10CMP_FACADERSt6vectorISsSaISsEERKSsP14THR_NAMED_PIPES8_ + 0x396)
+	   0x434a09: quartus_map + 0x34a09 (_ZN14QSYN_FRAMEWORK12execute_coreEP14THR_NAMED_PIPES1_ + 0x219)
+	   0x43771f: quartus_map + 0x3771f (_ZN14QSYN_FRAMEWORK7executeEv + 0x8af)
+	0x77f301580026: comp_qexe + 0x1b026 (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x6a7)
+	   0x42b821: quartus_map + 0x2b821 (_Z9qsyn_mainiPPKc + 0x151)
+	0x77f2f714fe30: ccl_msg + 0x3ee30 (_Z15msg_main_threadPv + 0x10)
+	0x77f2f70a9acc: ccl_thr + 0x5acc (thr_final_wrapper + 0xc)
+	0x77f2f714feef: ccl_msg + 0x3eeef (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)
+	0x77f2f7ae0f9c: ccl_mem + 0x9f9c (_Z18mem_thread_wrapperPFPvS_ES_ + 0x5c)
+	0x77f2f70e9b39: ccl_err + 0x8b39 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)
+	0x77f2f70a9b0f: ccl_thr + 0x5b0f (thr_thread_wrapper + 0x15)
+	0x77f2f7151ea1: ccl_msg + 0x40ea1 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xb2)
+	0x77f2e322a1ca: c.so.6 + 0x2a1ca
+	0x77f2e322a28b: c.so.6 + 0x2a28b (__libc_start_main + 0x8b)
+	   0x4140b5: quartus_map + 0x140b5
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Tue Nov 26 16:10:40 2024
+</date>
+<version>Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition</version>
+</internal_error>
