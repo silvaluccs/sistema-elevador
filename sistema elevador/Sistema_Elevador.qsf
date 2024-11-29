@@ -85,3 +85,6 @@ set_global_assignment -name VERILOG_FILE contagem_pessoas_no_elevador.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VERILOG_FILE display_pessoas.v
 set_global_assignment -name VERILOG_FILE gerenciar_display.v
+set_global_assignment -name VERILOG_FILE display_movimento_elevador.v
+set_global_assignment -name VERILOG_FILE demux_1x4.v
+set_global_assignment -name VERILOG_FILE mux_4x1.v

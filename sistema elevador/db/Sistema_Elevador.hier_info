@@ -2,28 +2,29 @@
 clock_in => clock_in.IN1
 btn_add => btn_add.IN1
 btn_sub => btn_sub.IN1
-led_rgb[0] << contagem_pessoas_no_elevador:contador_pessoas_elevador.port3
-led_rgb[1] << contagem_pessoas_no_elevador:contador_pessoas_elevador.port3
+led_rgb[0] <= contagem_pessoas_no_elevador:contador_pessoas_elevador.port3
+led_rgb[1] <= contagem_pessoas_no_elevador:contador_pessoas_elevador.port3
 chave1 => seletor_andar[1].IN1
 chave0 => seletor_andar[0].IN1
-a << gerenciar_display:gerenciandoDisplay.port4
-b << gerenciar_display:gerenciandoDisplay.port5
-c << gerenciar_display:gerenciandoDisplay.port6
-d << gerenciar_display:gerenciandoDisplay.port7
-e << gerenciar_display:gerenciandoDisplay.port8
-f << gerenciar_display:gerenciandoDisplay.port9
-g << gerenciar_display:gerenciandoDisplay.port10
-p << <VCC>
-d1 << clock_display.DB_MAX_OUTPUT_PORT_TYPE
-d2 << <VCC>
-d3 << <VCC>
-d4 << clock_display.DB_MAX_OUTPUT_PORT_TYPE
+a <= gerenciar_display:gerenciandoDisplay.port7
+b <= gerenciar_display:gerenciandoDisplay.port8
+c <= gerenciar_display:gerenciandoDisplay.port9
+d <= gerenciar_display:gerenciandoDisplay.port10
+e <= gerenciar_display:gerenciandoDisplay.port11
+f <= gerenciar_display:gerenciandoDisplay.port12
+g <= gerenciar_display:gerenciandoDisplay.port13
+p <= <VCC>
+d1 <= demux_1x4:demux_selecionar_display.port5
+d2 <= demux_1x4:demux_selecionar_display.port4
+d3 <= <VCC>
+d4 <= demux_1x4:demux_selecionar_display.port2
 
 
 |main|divisor_frequencia:df
 clock_out <= FF_jk:FF_jk26.q
 clock_debouce <= clock_temp[18].DB_MAX_OUTPUT_PORT_TYPE
-clock_display <= clock_temp[11].DB_MAX_OUTPUT_PORT_TYPE
+clock_display[0] <= clock_temp[10].DB_MAX_OUTPUT_PORT_TYPE
+clock_display[1] <= clock_temp[11].DB_MAX_OUTPUT_PORT_TYPE
 clock_entrada => clock_entrada.IN1
 
 
@@ -293,6 +294,8 @@ andar[1] <= proximoAndar[1].DB_MAX_OUTPUT_PORT_TYPE
 seletor_andar[0] => seletor_andar[0].IN1
 seletor_andar[1] => seletor_andar[1].IN1
 clock_in => clock_in.IN1
+S <= controleSubidaDescida.DB_MAX_OUTPUT_PORT_TYPE
+P <= nor_G_L.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|controle_andares:controlAndares|comparador:comparar_andares
@@ -347,24 +350,6 @@ clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
 
 
-|main|debouce:comb_5
-ruido => ruido.IN1
-clock => clock.IN2
-sem_ruido <= and0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|debouce:comb_5|FF_d:d0
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-
-
-|main|debouce:comb_5|FF_d:d1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => Q~reg0.CLK
-D => Q~reg0.DATAIN
-
-
 |main|debouce:comb_6
 ruido => ruido.IN1
 clock => clock.IN2
@@ -378,6 +363,24 @@ D => Q~reg0.DATAIN
 
 
 |main|debouce:comb_6|FF_d:d1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|main|debouce:comb_7
+ruido => ruido.IN1
+clock => clock.IN2
+sem_ruido <= and0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|debouce:comb_7|FF_d:d0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+
+
+|main|debouce:comb_7|FF_d:d1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
@@ -431,19 +434,60 @@ clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
 
 
+|main|demux_1x4:demux_selecionar_display
+Sel[0] => Sel[0].IN2
+Sel[1] => Sel[1].IN1
+E => E.IN1
+Out4 <= demux_1x2:d2.Out2
+Out3 <= demux_1x2:d2.Out1
+Out2 <= demux_1x2:d1.Out2
+Out1 <= demux_1x2:d1.Out1
+
+
+|main|demux_1x4:demux_selecionar_display|demux_1x2:d0
+Sel => and1.IN0
+Sel => and2.IN0
+E => and1.IN1
+E => and2.IN1
+Out2 <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Out1 <= and2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|demux_1x4:demux_selecionar_display|demux_1x2:d2
+Sel => and1.IN0
+Sel => and2.IN0
+E => and1.IN1
+E => and2.IN1
+Out2 <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Out1 <= and2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|demux_1x4:demux_selecionar_display|demux_1x2:d1
+Sel => and1.IN0
+Sel => and2.IN0
+E => and1.IN1
+E => and2.IN1
+Out2 <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Out1 <= and2.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |main|gerenciar_display:gerenciandoDisplay
 andar[0] => andar[0].IN1
 andar[1] => andar[1].IN1
 A => A.IN1
 B => B.IN1
-controle_Mux => controle_Mux.IN7
-a <= mux_2x1:mux_seg_a.port3
-b <= mux_2x1:mux_seg_b.port3
-c <= mux_2x1:mux_seg_c.port3
-d <= mux_2x1:mux_seg_d.port3
-e <= mux_2x1:mux_seg_e.port3
-f <= mux_2x1:mux_seg_f.port3
-g <= mux_2x1:mux_seg_g.port3
+S => S.IN1
+D => D.IN1
+P => P.IN1
+controle_Mux[0] => controle_Mux[0].IN7
+controle_Mux[1] => controle_Mux[1].IN7
+a <= mux_4x1:Mux_seg_a.port5
+b <= mux_4x1:Mux_seg_b.port5
+c <= mux_4x1:Mux_seg_c.port5
+d <= mux_4x1:Mux_seg_d.port5
+e <= mux_4x1:Mux_seg_e.port5
+f <= mux_4x1:Mux_seg_f.port5
+g <= mux_4x1:Mux_seg_g.port5
 
 
 |main|gerenciar_display:gerenciandoDisplay|display_andar:displayAndar
@@ -465,6 +509,23 @@ f <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 g <= and1.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|main|gerenciar_display:gerenciandoDisplay|display_movimento_elevador:display_movimento
+S => b.DATAIN
+S => e.DATAIN
+S => and0.IN0
+D => ~NO_FANOUT~
+P => c.DATAIN
+P => d.DATAIN
+P => and0.IN1
+a <= and0.DB_MAX_OUTPUT_PORT_TYPE
+b <= S.DB_MAX_OUTPUT_PORT_TYPE
+c <= P.DB_MAX_OUTPUT_PORT_TYPE
+d <= P.DB_MAX_OUTPUT_PORT_TYPE
+e <= S.DB_MAX_OUTPUT_PORT_TYPE
+f <= and0.DB_MAX_OUTPUT_PORT_TYPE
+g <= <GND>
+
+
 |main|gerenciar_display:gerenciandoDisplay|display_pessoas:display_pessoas
 A => And1.IN0
 A => Or0.IN0
@@ -483,59 +544,115 @@ f <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 g <= A.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_a
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_b
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_b
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_c
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_c
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_d
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_d
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_e
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_e
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_f
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_f
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_g
+|main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_g
 a => and0.IN0
 b => and1.IN0
-sel => and1.IN1
-sel => and0.IN1
+c => and2.IN0
+d => and3.IN0
+sel[0] => and1.IN1
+sel[0] => and3.IN1
+sel[0] => and0.IN1
+sel[0] => and2.IN1
+sel[1] => and2.IN2
+sel[1] => and3.IN2
+sel[1] => and0.IN2
+sel[1] => and1.IN2
 out <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 

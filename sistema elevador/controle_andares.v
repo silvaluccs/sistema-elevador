@@ -2,10 +2,11 @@
 Modulo responsavel pelo controle dos andares, subindo e descendo.
 */
 
-module controle_andares(andar, seletor_andar, clock_in);
+module controle_andares(andar, seletor_andar, clock_in, S, P);
  input clock_in;
  input [1:0] seletor_andar;
  output [1:0] andar;
+ output S, P;
  
  wire [1:0] proximoAndar;
  wire [1:0] andarAtual;
@@ -26,6 +27,8 @@ module controle_andares(andar, seletor_andar, clock_in);
  FF_d FlipFlop_Q0(proximoAndar[0], clock, andarAtual[0]);
  
  assign andar = proximoAndar;
+ assign S = controleSubidaDescida;
+ assign P = nor_G_L;
  
 endmodule
 

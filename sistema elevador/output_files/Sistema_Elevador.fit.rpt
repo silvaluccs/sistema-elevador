@@ -1,5 +1,5 @@
 Fitter report for Sistema_Elevador
-Wed Nov 27 09:46:11 2024
+Wed Nov 27 10:24:55 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Nov 27 09:46:11 2024       ;
+; Fitter Status         ; Successful - Wed Nov 27 10:24:55 2024       ;
 ; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; Sistema_Elevador                            ;
 ; Top-level Entity Name ; main                                        ;
@@ -131,12 +131,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
+;     Processor 2            ;   2.6%      ;
 +----------------------------+-------------+
 
 
@@ -166,9 +166,9 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ;     -- Combinational with a register        ; 31                 ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 10                 ;
+;     -- 4 input functions                    ; 11                 ;
 ;     -- 3 input functions                    ; 4                  ;
-;     -- 2 input functions                    ; 2                  ;
+;     -- 2 input functions                    ; 1                  ;
 ;     -- 1 input functions                    ; 26                 ;
 ;     -- 0 input functions                    ; 0                  ;
 ;                                             ;                    ;
@@ -181,11 +181,11 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ;     -- asynchronous clear/load mode         ; 0                  ;
 ;                                             ;                    ;
 ; Total registers                             ; 32 / 240 ( 13 % )  ;
-; Total LABs                                  ; 17 / 24 ( 71 % )   ;
+; Total LABs                                  ; 15 / 24 ( 63 % )   ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
 ; I/O pins                                    ; 19 / 80 ( 24 % )   ;
-;     -- Clock pins                           ; 2 / 4 ( 50 % )     ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )     ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
 ;                                             ;                    ;
@@ -195,12 +195,12 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; Global signals                              ; 2                  ;
 ;     -- Global clocks                        ; 2 / 4 ( 50 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 3.8% / 3.7% / 3.9% ;
-; Peak interconnect usage (total/H/V)         ; 3.8% / 3.7% / 3.9% ;
-; Maximum fan-out                             ; 12                 ;
-; Highest non-global fan-out                  ; 12                 ;
-; Total fan-out                               ; 126                ;
-; Average fan-out                             ; 2.03               ;
+; Average interconnect usage (total/H/V)      ; 3.6% / 4.0% / 3.2% ;
+; Peak interconnect usage (total/H/V)         ; 3.6% / 4.0% / 3.2% ;
+; Maximum fan-out                             ; 11                 ;
+; Highest non-global fan-out                  ; 11                 ;
+; Total fan-out                               ; 128                ;
+; Average fan-out                             ; 2.06               ;
 +---------------------------------------------+--------------------+
 
 
@@ -209,10 +209,10 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; btn_add  ; 42    ; 1        ; 5            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; btn_sub  ; 40    ; 1        ; 5            ; 0            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; chave0   ; 67    ; 2        ; 8            ; 3            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; chave1   ; 64    ; 2        ; 8            ; 3            ; 4           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; btn_add  ; 91    ; 2        ; 4            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; btn_sub  ; 87    ; 2        ; 5            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; chave0   ; 21    ; 1        ; 1            ; 1            ; 3           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; chave1   ; 20    ; 1        ; 1            ; 1            ; 2           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 ; clock_in ; 12    ; 1        ; 1            ; 3            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
@@ -224,7 +224,7 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 +------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; a          ; 90    ; 2        ; 4            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; b          ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; c          ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; c          ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; d          ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; d1         ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; d2         ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -232,9 +232,9 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; d4         ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; e          ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; f          ; 92    ; 2        ; 3            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; g          ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; led_rgb[0] ; 58    ; 2        ; 8            ; 2            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; led_rgb[1] ; 61    ; 2        ; 8            ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; g          ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; led_rgb[0] ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; led_rgb[1] ; 86    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; p          ; 96    ; 2        ; 3            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
@@ -273,8 +273,8 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; 17       ; 11         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 18       ; 12         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 19       ; 13         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 20       ; 14         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 21       ; 15         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 20       ; 14         ; 1        ; chave1         ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 15         ; 1        ; chave0         ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 22       ; 16         ; 1        ; #TMS           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 23       ; 17         ; 1        ; #TDI           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 24       ; 18         ; 1        ; #TCK           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
@@ -293,9 +293,9 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; 37       ; 29         ; 1        ; d4             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 38       ; 30         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 39       ; 31         ; 1        ; g              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 40       ; 32         ; 1        ; btn_sub        ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 40       ; 32         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 41       ; 33         ; 1        ; c              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 42       ; 34         ; 1        ; btn_add        ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 43       ; 35         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 44       ; 36         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
@@ -311,16 +311,16 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; 55       ; 45         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 56       ; 46         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 57       ; 47         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 58       ; 48         ; 2        ; led_rgb[0]     ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 58       ; 48         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 60       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 61       ; 49         ; 2        ; led_rgb[1]     ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 61       ; 49         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 62       ; 50         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 63       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
-; 64       ; 51         ; 2        ; chave1         ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 64       ; 51         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 65       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 66       ; 52         ; 2        ; d2             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 67       ; 53         ; 2        ; chave0         ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 67       ; 53         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 68       ; 54         ; 2        ; d3             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 69       ; 55         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 70       ; 56         ; 2        ; b              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
@@ -338,13 +338,13 @@ The pin-out file can be found in /home/lucas/codigos/uefs/mi circuitos digitais/
 ; 82       ; 66         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 83       ; 67         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 84       ; 68         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 85       ; 69         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 86       ; 70         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 87       ; 71         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 85       ; 69         ; 2        ; led_rgb[0]     ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 86       ; 70         ; 2        ; led_rgb[1]     ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 87       ; 71         ; 2        ; btn_sub        ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 88       ; 72         ; 2        ; d1             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 89       ; 73         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 90       ; 74         ; 2        ; a              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 91       ; 75         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 91       ; 75         ; 2        ; btn_add        ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 92       ; 76         ; 2        ; f              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
@@ -381,9 +381,9 @@ Note: User assignments will override these defaults. The user specified values a
 +------------+-----------------------------+
 ; led_rgb[0] ; Missing location assignment ;
 ; led_rgb[1] ; Missing location assignment ;
-; btn_add    ; Missing location assignment ;
-; chave0     ; Missing location assignment ;
 ; chave1     ; Missing location assignment ;
+; chave0     ; Missing location assignment ;
+; btn_add    ; Missing location assignment ;
 ; btn_sub    ; Missing location assignment ;
 +------------+-----------------------------+
 
@@ -398,14 +398,15 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |FF_d:Y0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|FF_d:Y0                                                   ; FF_d                                    ; work         ;
 ;       |FF_d:Y1|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|FF_d:Y1                                                   ; FF_d                                    ; work         ;
 ;       |controle_quantidade_pessoas_no_elevador:control_quant_pes| ; 0 (0)       ; 0            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 1 (1)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|controle_quantidade_pessoas_no_elevador:control_quant_pes ; controle_quantidade_pessoas_no_elevador ; work         ;
-;    |controle_andares:controlAndares|                              ; 4 (0)       ; 2            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares                                                                                  ; controle_andares                        ; work         ;
+;    |controle_andares:controlAndares|                              ; 5 (1)       ; 2            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares                                                                                  ; controle_andares                        ; work         ;
 ;       |FF_d:FlipFlop_Q0|                                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|FF_d:FlipFlop_Q0                                                                 ; FF_d                                    ; work         ;
 ;       |FF_d:FlipFlop_Q1|                                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|FF_d:FlipFlop_Q1                                                                 ; FF_d                                    ; work         ;
-;       |mux_2x1:mux_para_clock|                                    ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|mux_2x1:mux_para_clock                                                           ; mux_2x1                                 ; work         ;
-;    |debouce:comb_5|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_5                                                                                                   ; debouce                                 ; work         ;
-;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_5|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
-;    |debouce:comb_6|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6                                                                                                   ; debouce                                 ; work         ;
-;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
+;       |comparador:comparar_andares|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|comparador:comparar_andares                                                      ; comparador                              ; work         ;
+;       |mux_2x1:mux_para_clock|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|mux_2x1:mux_para_clock                                                           ; mux_2x1                                 ; work         ;
+;    |debouce:comb_6|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6                                                                                                   ; debouce                                 ; work         ;
+;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
+;    |debouce:comb_7|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_7                                                                                                   ; debouce                                 ; work         ;
+;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_7|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
 ;    |divisor_frequencia:df|                                        ; 26 (0)      ; 26           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 26 (0)           ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df                                                                                            ; divisor_frequencia                      ; work         ;
 ;       |FF_jk:FF_jk10|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk10                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk11|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk11                                                                              ; FF_jk                                   ; work         ;
@@ -433,14 +434,13 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |FF_jk:FF_jk7|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk7                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk8|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk8                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk9|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk9                                                                               ; FF_jk                                   ; work         ;
-;    |gerenciar_display:gerenciandoDisplay|                         ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay                                                                             ; gerenciar_display                       ; work         ;
-;       |mux_2x1:mux_seg_a|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_a                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_b|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_b                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_c|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_c                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_d|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_d                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_e|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_e                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_f|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_f                                                           ; mux_2x1                                 ; work         ;
-;       |mux_2x1:mux_seg_g|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_2x1:mux_seg_g                                                           ; mux_2x1                                 ; work         ;
+;    |gerenciar_display:gerenciandoDisplay|                         ; 8 (0)       ; 0            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay                                                                             ; gerenciar_display                       ; work         ;
+;       |mux_4x1:Mux_seg_a|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a                                                           ; mux_4x1                                 ; work         ;
+;       |mux_4x1:Mux_seg_b|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_b                                                           ; mux_4x1                                 ; work         ;
+;       |mux_4x1:Mux_seg_c|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_c                                                           ; mux_4x1                                 ; work         ;
+;       |mux_4x1:Mux_seg_d|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_d                                                           ; mux_4x1                                 ; work         ;
+;       |mux_4x1:Mux_seg_e|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_e                                                           ; mux_4x1                                 ; work         ;
+;       |mux_4x1:Mux_seg_f|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_f                                                           ; mux_4x1                                 ; work         ;
 +-------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -464,9 +464,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; d2         ; Output   ; --            ;
 ; d3         ; Output   ; --            ;
 ; d4         ; Output   ; --            ;
-; btn_add    ; Input    ; (1)           ;
-; chave0     ; Input    ; (0)           ;
 ; chave1     ; Input    ; (1)           ;
+; chave0     ; Input    ; (0)           ;
+; btn_add    ; Input    ; (1)           ;
 ; btn_sub    ; Input    ; (1)           ;
 ; clock_in   ; Input    ; (0)           ;
 +------------+----------+---------------+
@@ -478,32 +478,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                        ; Location    ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
 +-------------------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 ; clock_in                                                    ; PIN_12      ; 1       ; Clock ; no     ; --                   ; --               ;
-; controle_andares:controlAndares|mux_2x1:mux_para_clock|and0 ; LC_X5_Y3_N7 ; 2       ; Clock ; yes    ; Global Clock         ; GCLK3            ;
-; divisor_frequencia:df|FF_jk:FF_jk10|q                       ; LC_X3_Y4_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk11|q                       ; LC_X4_Y4_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk12|q                       ; LC_X4_Y4_N3 ; 12      ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk13|q                       ; LC_X4_Y2_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk14|q                       ; LC_X4_Y2_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk15|q                       ; LC_X3_Y2_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk16|q                       ; LC_X2_Y2_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk17|q                       ; LC_X2_Y2_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; controle_andares:controlAndares|mux_2x1:mux_para_clock|and0 ; LC_X2_Y1_N8 ; 2       ; Clock ; yes    ; Global Clock         ; GCLK3            ;
+; divisor_frequencia:df|FF_jk:FF_jk10|q                       ; LC_X5_Y1_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk11|q                       ; LC_X5_Y1_N1 ; 11      ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk12|q                       ; LC_X6_Y1_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk13|q                       ; LC_X6_Y1_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk14|q                       ; LC_X6_Y3_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk15|q                       ; LC_X6_Y3_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk16|q                       ; LC_X5_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk17|q                       ; LC_X5_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
 ; divisor_frequencia:df|FF_jk:FF_jk18|q                       ; LC_X2_Y3_N7 ; 2       ; Clock ; no     ; --                   ; --               ;
 ; divisor_frequencia:df|FF_jk:FF_jk19|q                       ; LC_X2_Y3_N9 ; 6       ; Clock ; yes    ; Global Clock         ; GCLK2            ;
-; divisor_frequencia:df|FF_jk:FF_jk1|q                        ; LC_X2_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk20|q                       ; LC_X6_Y1_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk21|q                       ; LC_X6_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk22|q                       ; LC_X5_Y1_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk23|q                       ; LC_X5_Y1_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk24|q                       ; LC_X4_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk25|q                       ; LC_X5_Y3_N5 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk2|q                        ; LC_X3_Y1_N7 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk3|q                        ; LC_X3_Y1_N5 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk4|q                        ; LC_X4_Y3_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk5|q                        ; LC_X4_Y3_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk6|q                        ; LC_X3_Y3_N1 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk7|q                        ; LC_X2_Y4_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk8|q                        ; LC_X2_Y4_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; divisor_frequencia:df|FF_jk:FF_jk9|q                        ; LC_X3_Y4_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk1|q                        ; LC_X2_Y2_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk20|q                       ; LC_X4_Y3_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk21|q                       ; LC_X4_Y3_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk22|q                       ; LC_X3_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk23|q                       ; LC_X3_Y3_N1 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk24|q                       ; LC_X3_Y1_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk25|q                       ; LC_X3_Y1_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk2|q                        ; LC_X3_Y2_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk3|q                        ; LC_X3_Y2_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk4|q                        ; LC_X4_Y2_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk5|q                        ; LC_X4_Y2_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk6|q                        ; LC_X5_Y2_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk7|q                        ; LC_X5_Y2_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk8|q                        ; LC_X4_Y1_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; divisor_frequencia:df|FF_jk:FF_jk9|q                        ; LC_X4_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
 +-------------------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 
 
@@ -512,7 +512,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------+-------------+---------+----------------------+------------------+
 ; Name                                                        ; Location    ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------------------------------------------------------------+-------------+---------+----------------------+------------------+
-; controle_andares:controlAndares|mux_2x1:mux_para_clock|and0 ; LC_X5_Y3_N7 ; 2       ; Global Clock         ; GCLK3            ;
+; controle_andares:controlAndares|mux_2x1:mux_para_clock|and0 ; LC_X2_Y1_N8 ; 2       ; Global Clock         ; GCLK3            ;
 ; divisor_frequencia:df|FF_jk:FF_jk19|q                       ; LC_X2_Y3_N9 ; 6       ; Global Clock         ; GCLK2            ;
 +-------------------------------------------------------------+-------------+---------+----------------------+------------------+
 
@@ -522,88 +522,90 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------+
 ; Routing Resource Type ; Usage             ;
 +-----------------------+-------------------+
-; C4s                   ; 26 / 784 ( 3 % )  ;
-; Direct links          ; 13 / 888 ( 1 % )  ;
+; C4s                   ; 20 / 784 ( 3 % )  ;
+; Direct links          ; 10 / 888 ( 1 % )  ;
 ; Global clocks         ; 2 / 4 ( 50 % )    ;
 ; LAB clocks            ; 3 / 32 ( 9 % )    ;
 ; LUT chains            ; 1 / 216 ( < 1 % ) ;
-; Local interconnects   ; 45 / 888 ( 5 % )  ;
-; R4s                   ; 18 / 704 ( 3 % )  ;
+; Local interconnects   ; 39 / 888 ( 4 % )  ;
+; R4s                   ; 20 / 704 ( 3 % )  ;
 +-----------------------+-------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 2.53) ; Number of LABs  (Total = 17) ;
+; Number of Logic Elements  (Average = 2.87) ; Number of LABs  (Total = 15) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 4                            ;
-; 2                                          ; 10                           ;
+; 1                                          ; 1                            ;
+; 2                                          ; 11                           ;
 ; 3                                          ; 0                            ;
 ; 4                                          ; 1                            ;
 ; 5                                          ; 0                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 1                            ;
-; 8                                          ; 1                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 0                            ;
 ; 9                                          ; 0                            ;
-; 10                                         ; 0                            ;
+; 10                                         ; 1                            ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 17) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 15) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 17                           ;
+; 1 Clock                            ; 15                           ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 2.59) ; Number of LABs  (Total = 17) ;
+; Number of Signals Sourced  (Average = 2.93) ; Number of LABs  (Total = 15) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 4                            ;
-; 2                                           ; 10                           ;
+; 1                                           ; 1                            ;
+; 2                                           ; 11                           ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 1.59) ; Number of LABs  (Total = 17) ;
+; Number of Signals Sourced Out  (Average = 1.67) ; Number of LABs  (Total = 15) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 15                           ;
+; 1                                               ; 13                           ;
 ; 2                                               ; 0                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 0                            ;
+; 4                                               ; 1                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 2                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 1.82) ; Number of LABs  (Total = 17) ;
+; Number of Distinct Inputs  (Average = 1.53) ; Number of LABs  (Total = 15) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 14                           ;
+; 1                                           ; 12                           ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
+; 3                                           ; 2                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 1                            ;
-; 6                                           ; 2                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -626,7 +628,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; chave0               ; 11.6              ;
+; I/O             ; chave0               ; 12.0              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -637,7 +639,7 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------------------------------------+-------------------+
 ; Source Register ; Destination Register                               ; Delay Added in ns ;
 +-----------------+----------------------------------------------------+-------------------+
-; chave0          ; controle_andares:controlAndares|FF_d:FlipFlop_Q1|Q ; 5.847             ;
+; chave0          ; controle_andares:controlAndares|FF_d:FlipFlop_Q1|Q ; 5.999             ;
 +-----------------+----------------------------------------------------+-------------------+
 Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
@@ -711,7 +713,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 9 total pin(s) used --  33 pins available
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "controleSubDes" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -724,15 +726,15 @@ Info (170195): Router estimated average interconnect usage is 3% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/output_files/Sistema_Elevador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 532 megabytes
-    Info: Processing ended: Wed Nov 27 09:46:11 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Nov 27 10:24:55 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

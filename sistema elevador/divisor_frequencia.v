@@ -6,7 +6,8 @@
 
 module divisor_frequencia(clock_out, clock_debouce, clock_display, clock_entrada);
 	input clock_entrada;
-	output clock_out, clock_debouce, clock_display;
+	output clock_out, clock_debouce;
+	output [1:0] clock_display;
 	
 	
 	wire [25:0] clock_temp;
@@ -46,6 +47,6 @@ module divisor_frequencia(clock_out, clock_debouce, clock_display, clock_entrada
 
 	assign clock_out = clock_temp[25];
 	assign clock_debouce = clock_temp[18];
-	assign clock_display = clock_temp[11];
+	assign clock_display = {clock_temp[11], clock_temp[10]};
 	
 endmodule	
