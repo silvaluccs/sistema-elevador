@@ -1,0 +1,235 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "11/27/2024 08:20:48"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module contagem_pessoas_no_elevador (
+	clock,
+	botao_subir,
+	botao_descer,
+	alerta,
+	quantidade_pessoas);
+input 	clock;
+input 	botao_subir;
+input 	botao_descer;
+output 	alerta;
+output 	[1:0] quantidade_pessoas;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clock~combout ;
+wire \botao_descer~combout ;
+wire \botao_subir~combout ;
+wire \Y1|Q~regout ;
+wire \Y0|Q~regout ;
+wire \control_quant_pes|And5~0_combout ;
+
+
+// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \clock~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clock~combout ),
+	.padio(clock));
+// synopsys translate_off
+defparam \clock~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \botao_descer~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\botao_descer~combout ),
+	.padio(botao_descer));
+// synopsys translate_off
+defparam \botao_descer~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \botao_subir~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\botao_subir~combout ),
+	.padio(botao_subir));
+// synopsys translate_off
+defparam \botao_subir~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X7_Y4_N4
+maxii_lcell \Y1|Q (
+// Equation(s):
+// \Y1|Q~regout  = DFFEAS((\botao_descer~combout  & (\Y1|Q~regout  & ((\botao_subir~combout ) # (\Y0|Q~regout )))) # (!\botao_descer~combout  & ((\Y1|Q~regout ) # ((\botao_subir~combout  & \Y0|Q~regout )))), GLOBAL(\clock~combout ), VCC, , , , , , )
+
+	.clk(\clock~combout ),
+	.dataa(\botao_descer~combout ),
+	.datab(\botao_subir~combout ),
+	.datac(\Y1|Q~regout ),
+	.datad(\Y0|Q~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\Y1|Q~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Y1|Q .lut_mask = "f4d0";
+defparam \Y1|Q .operation_mode = "normal";
+defparam \Y1|Q .output_mode = "reg_only";
+defparam \Y1|Q .register_cascade_mode = "off";
+defparam \Y1|Q .sum_lutc_input = "datac";
+defparam \Y1|Q .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y4_N3
+maxii_lcell \Y0|Q (
+// Equation(s):
+// \Y0|Q~regout  = DFFEAS((\botao_descer~combout  & ((\botao_subir~combout  & ((\Y0|Q~regout ))) # (!\botao_subir~combout  & (\Y1|Q~regout  & !\Y0|Q~regout )))) # (!\botao_descer~combout  & ((\botao_subir~combout  & ((\Y1|Q~regout ) # (!\Y0|Q~regout ))) # 
+// (!\botao_subir~combout  & ((\Y0|Q~regout ))))), GLOBAL(\clock~combout ), VCC, , , , , , )
+
+	.clk(\clock~combout ),
+	.dataa(\botao_descer~combout ),
+	.datab(\botao_subir~combout ),
+	.datac(\Y1|Q~regout ),
+	.datad(\Y0|Q~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\Y0|Q~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Y0|Q .lut_mask = "d964";
+defparam \Y0|Q .operation_mode = "normal";
+defparam \Y0|Q .output_mode = "reg_only";
+defparam \Y0|Q .register_cascade_mode = "off";
+defparam \Y0|Q .sum_lutc_input = "datac";
+defparam \Y0|Q .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X7_Y4_N8
+maxii_lcell \control_quant_pes|And5~0 (
+// Equation(s):
+// \control_quant_pes|And5~0_combout  = (\Y0|Q~regout  & (((\botao_subir~combout  & \Y1|Q~regout ))))
+
+	.clk(gnd),
+	.dataa(\Y0|Q~regout ),
+	.datab(vcc),
+	.datac(\botao_subir~combout ),
+	.datad(\Y1|Q~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\control_quant_pes|And5~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \control_quant_pes|And5~0 .lut_mask = "a000";
+defparam \control_quant_pes|And5~0 .operation_mode = "normal";
+defparam \control_quant_pes|And5~0 .output_mode = "comb_only";
+defparam \control_quant_pes|And5~0 .register_cascade_mode = "off";
+defparam \control_quant_pes|And5~0 .sum_lutc_input = "datac";
+defparam \control_quant_pes|And5~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \alerta~I (
+	.datain(\control_quant_pes|And5~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(alerta));
+// synopsys translate_off
+defparam \alerta~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_74,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \quantidade_pessoas[0]~I (
+	.datain(\Y0|Q~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(quantidade_pessoas[0]));
+// synopsys translate_off
+defparam \quantidade_pessoas[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \quantidade_pessoas[1]~I (
+	.datain(\Y1|Q~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(quantidade_pessoas[1]));
+// synopsys translate_off
+defparam \quantidade_pessoas[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule
