@@ -1,16 +1,12 @@
-// modulo para o fliflop do tipo t
-module tff ( 	input clk,
-            	input rstn,
-            	input t,
-            output reg q);
+module tff(clk,t,q);
+input clk,t;
+output reg q;
 
-  always @ (posedge clk) begin
-    if (!rstn)
-      q <= 0;
-    else
-    	if (t)
-      		q <= ~q;
-    	else
-      		q <= q;
-  end
+always @ (posedge clk)begin
+    if(t == 0)
+        q <= q;
+    else 
+        q = ~q;
+end
+                
 endmodule

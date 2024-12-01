@@ -101,3 +101,49 @@ R14
 !i113 1
 R10
 R11
+vmain
+Z15 !s110 1732885882
+!i10b 1
+!s100 Z]cJa<fVZ9<92b22FFbeh3
+R1
+I47?5Z@7n_2_UWXn<oY0Pa0
+R2
+Z16 d/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/simulation/qsim
+w1732885881
+R4
+R5
+!i122 10
+L0 32 1820
+R6
+r1
+!s85 0
+31
+Z17 !s108 1732885882.000000
+R8
+R9
+!i113 1
+R10
+R11
+vmain_vlg_vec_tst
+R15
+!i10b 1
+!s100 MQkSTAj32cmjZ6W2:GWc42
+R1
+ImCmjTR`FAam^C90PHn^[>2
+R2
+R16
+w1732885879
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 11
+L0 30 90
+R6
+r1
+!s85 0
+31
+R17
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R10
+R11

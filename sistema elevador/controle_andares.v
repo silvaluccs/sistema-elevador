@@ -2,24 +2,31 @@
 Modulo responsavel pelo controle dos andares, subindo e descendo.
 */
 
-module controle_andares(andar, seletor_andar, clock_in, S, P);
- input clock_in;
+module controle_andares(andar, seletor_andar, clock_in, porta_fechada, pessoa_para_descer, S, P, abrir_fechar_porta);
+ input clock_in, porta_fechada, pessoa_para_descer;
  input [1:0] seletor_andar;
  output [1:0] andar;
+ output abrir_fechar_porta;
  output S, P;
  
  wire [1:0] proximoAndar;
  wire [1:0] andarAtual;
  
- wire G, L, controleSubidaDescida, nor_G_L, clock;
+ wire G, L, controleSubidaDescida, or_G_L, clock, permitir_movimento;
  
  comparador comparar_andares(G, L, seletor_andar, proximoAndar);
  
  assign controleSubidaDescida = G;
  
- nor Nor0(nor_G_L, G, L);
+ wire not_pessoa_para_descer;
+ not Not0(not_pessoa_para_descer, pessoa_para_descer);
  
- mux_2x1 mux_para_clock(clock_in, 1'b0, nor_G_L, clock);
+ nor Or0(or_G_L, G, L);
+ and And0(permitir_movimento, not_pessoa_para_descer, or_G_L, porta_fechada);
+ 
+ mux_2x1 seletor_porta_abrir_fechar(or_G_L, 1'b0, pessoa_para_descer, abrir_fechar_porta);
+ 
+ mux_2x1 mux_para_clock(clock_in, 1'b0, permitir_movimento, clock);
  
  controle_proximo_andar(andarAtual, proximoAndar, controleSubidaDescida);
  
@@ -28,7 +35,7 @@ module controle_andares(andar, seletor_andar, clock_in, S, P);
  
  assign andar = proximoAndar;
  assign S = controleSubidaDescida;
- assign P = nor_G_L;
+ assign P = permitir_movimento;
  
 endmodule
 

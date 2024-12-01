@@ -46,7 +46,7 @@ module divisor_frequencia(clock_out, clock_debouce, clock_display, clock_entrada
 	
 
 	assign clock_out = clock_temp[25];
-	assign clock_debouce = clock_temp[18];
+	assign clock_debouce = clock_temp[21];
 	assign clock_display = {clock_temp[11], clock_temp[10]};
 	
 endmodule	

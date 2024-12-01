@@ -62,7 +62,6 @@ set_global_assignment -name VERILOG_FILE display_andar.v
 set_global_assignment -name VERILOG_FILE FF_jk.v
 set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name VERILOG_FILE divisor_frequencia.v
-set_location_assignment PIN_35 -to controleSubDes
 set_location_assignment PIN_90 -to a
 set_location_assignment PIN_70 -to b
 set_location_assignment PIN_41 -to c
@@ -88,3 +87,9 @@ set_global_assignment -name VERILOG_FILE gerenciar_display.v
 set_global_assignment -name VERILOG_FILE display_movimento_elevador.v
 set_global_assignment -name VERILOG_FILE demux_1x4.v
 set_global_assignment -name VERILOG_FILE mux_4x1.v
+set_global_assignment -name VERILOG_FILE abrir_e_fechar_porta.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VERILOG_FILE memoria_registradores.v
+set_global_assignment -name VERILOG_FILE mux_2x1_2bits.v
+set_global_assignment -name VERILOG_FILE memoria_ram.v
+set_global_assignment -name VERILOG_FILE seletor_proximo_andar.v

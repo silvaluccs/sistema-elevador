@@ -1,8 +1,8 @@
 // modulo responsavel pela maquina de estados que indica a quantidade de
 // pessoas no elevador
 
-module contagem_pessoas_no_elevador(clock, botao_subir, botao_descer, alerta, quantidade_pessoas);
- input clock, botao_descer, botao_subir;
+module contagem_pessoas_no_elevador(clock, botao_subir, botao_descer, porta_aberta, alerta, quantidade_pessoas);
+ input clock, botao_descer, botao_subir, porta_aberta;
  output alerta;
  output [1:0] quantidade_pessoas;
 
@@ -11,8 +11,12 @@ module contagem_pessoas_no_elevador(clock, botao_subir, botao_descer, alerta, qu
  
  controle_quantidade_pessoas_no_elevador control_quant_pes(proximo_estado, estado_atual, botao_subir, botao_descer, alerta);
  
- FF_d Y0(proximo_estado[0], clock, estado_atual[0]);
- FF_d Y1(proximo_estado[1], clock, estado_atual[1]);
+ wire permitir_subir_pessoas;
+ 
+ mux_2x1 permicao_subir(1'b0, clock, porta_aberta, permitir_subir_pessoas);
+ 
+ FF_d Y0(proximo_estado[0], permitir_subir_pessoas, estado_atual[0]);
+ FF_d Y1(proximo_estado[1], permitir_subir_pessoas, estado_atual[1]);
  
  assign quantidade_pessoas = proximo_estado;
  

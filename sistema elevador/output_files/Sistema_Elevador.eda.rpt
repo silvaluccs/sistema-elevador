@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Sistema_Elevador
-Wed Nov 27 10:25:02 2024
+Sun Dec  1 12:55:04 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Nov 27 10:25:02 2024 ;
+; EDA Netlist Writer Status ; Successful - Sun Dec  1 12:55:04 2024 ;
 ; Revision Name             ; Sistema_Elevador                      ;
 ; Top-level Entity Name     ; main                                  ;
 ; Family                    ; MAX II                                ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                      ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/simulation/modelsim/Sistema_Elevador.vo ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------------+
+; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/simulation/modelsim/Sistema_Elevador.vo ;
++-------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 27 10:25:02 2024
+    Info: Processing started: Sun Dec  1 12:55:03 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Sistema_Elevador -c Sistema_Elevador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Sistema_Elevador.vo in folder "/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Sistema_Elevador.vo in folder "/home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 585 megabytes
-    Info: Processing ended: Wed Nov 27 10:25:02 2024
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 581 megabytes
+    Info: Processing ended: Sun Dec  1 12:55:04 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

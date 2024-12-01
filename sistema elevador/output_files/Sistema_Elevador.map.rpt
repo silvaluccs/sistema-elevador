@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Sistema_Elevador
-Wed Nov 27 10:24:51 2024
+Sun Dec  1 12:54:54 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,47 +14,55 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_g"
- 11. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_f"
- 12. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_e"
- 13. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_d"
- 14. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_c"
- 15. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_b"
- 16. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a"
- 17. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay"
- 18. Port Connectivity Checks: "demux_1x4:demux_selecionar_display"
- 19. Port Connectivity Checks: "debouce:comb_6|FF_d:d1"
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_g"
+ 12. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_f"
+ 13. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_e"
+ 14. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_d"
+ 15. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_c"
+ 16. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_b"
+ 17. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a"
+ 18. Port Connectivity Checks: "gerenciar_display:gerenciandoDisplay"
+ 19. Port Connectivity Checks: "demux_1x4:demux_selecionar_display"
  20. Port Connectivity Checks: "controle_andares:controlAndares|mux_2x1:mux_para_clock"
- 21. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk26"
- 22. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk25"
- 23. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk24"
- 24. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk23"
- 25. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk22"
- 26. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk21"
- 27. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk20"
- 28. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk19"
- 29. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk18"
- 30. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk17"
- 31. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk16"
- 32. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk15"
- 33. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk14"
- 34. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk13"
- 35. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk12"
- 36. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk11"
- 37. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk10"
- 38. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk9"
- 39. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk8"
- 40. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk7"
- 41. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk6"
- 42. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk5"
- 43. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk4"
- 44. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk3"
- 45. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk2"
- 46. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk1"
- 47. Port Connectivity Checks: "divisor_frequencia:df"
- 48. Analysis & Synthesis Messages
- 49. Analysis & Synthesis Suppressed Messages
+ 21. Port Connectivity Checks: "controle_andares:controlAndares|mux_2x1:seletor_porta_abrir_fechar"
+ 22. Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|mux_2x1:seletor_leitura_dados"
+ 23. Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|demux_1x4:Seletor_escrita_dados"
+ 24. Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|mux_2x1:seletor_escrita_dados"
+ 25. Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|contador_barra_de_leds:contar_5_1"
+ 26. Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|contador_barra_de_leds:contar_5_0"
+ 27. Port Connectivity Checks: "contagem_pessoas_no_elevador:contador_pessoas_elevador|mux_2x1:permicao_subir"
+ 28. Port Connectivity Checks: "debouce:botao_adicionar_pessoa|FF_d:d1"
+ 29. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk26"
+ 30. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk25"
+ 31. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk24"
+ 32. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk23"
+ 33. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk22"
+ 34. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk21"
+ 35. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk20"
+ 36. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk19"
+ 37. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk18"
+ 38. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk17"
+ 39. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk16"
+ 40. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk15"
+ 41. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk14"
+ 42. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk13"
+ 43. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk12"
+ 44. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk11"
+ 45. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk10"
+ 46. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk9"
+ 47. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk8"
+ 48. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk7"
+ 49. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk6"
+ 50. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk5"
+ 51. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk4"
+ 52. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk3"
+ 53. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk2"
+ 54. Port Connectivity Checks: "divisor_frequencia:df|FF_jk:FF_jk1"
+ 55. Port Connectivity Checks: "divisor_frequencia:df"
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -81,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Nov 27 10:24:51 2024       ;
+; Analysis & Synthesis Status ; Successful - Sun Dec  1 12:54:54 2024       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; Sistema_Elevador                            ;
 ; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 44                                          ;
-; Total pins                  ; 19                                          ;
+; Total logic elements        ; 27                                          ;
+; Total pins                  ; 32                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -180,27 +188,32 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; FF_d.v                           ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/FF_d.v                         ;         ;
-; controle_andares.v               ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v             ;         ;
-; display_andar.v                  ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_andar.v                ;         ;
-; FF_jk.v                          ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/FF_jk.v                        ;         ;
-; main.v                           ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v                         ;         ;
-; divisor_frequencia.v             ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/divisor_frequencia.v           ;         ;
-; comparador.v                     ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/comparador.v                   ;         ;
-; mux_2x1.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/mux_2x1.v                      ;         ;
-; debouce.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/debouce.v                      ;         ;
-; contagem_pessoas_no_elevador.v   ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/contagem_pessoas_no_elevador.v ;         ;
-; display_pessoas.v                ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_pessoas.v              ;         ;
-; gerenciar_display.v              ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v            ;         ;
-; display_movimento_elevador.v     ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_movimento_elevador.v   ;         ;
-; demux_1x4.v                      ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/demux_1x4.v                    ;         ;
-; mux_4x1.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/mux_4x1.v                      ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                         ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; FF_d.v                           ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/FF_d.v                         ;         ;
+; controle_andares.v               ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/controle_andares.v             ;         ;
+; display_andar.v                  ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_andar.v                ;         ;
+; FF_jk.v                          ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/FF_jk.v                        ;         ;
+; main.v                           ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v                         ;         ;
+; divisor_frequencia.v             ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/divisor_frequencia.v           ;         ;
+; comparador.v                     ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/comparador.v                   ;         ;
+; mux_2x1.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_2x1.v                      ;         ;
+; debouce.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/debouce.v                      ;         ;
+; contagem_pessoas_no_elevador.v   ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v ;         ;
+; display_pessoas.v                ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_pessoas.v              ;         ;
+; gerenciar_display.v              ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/gerenciar_display.v            ;         ;
+; display_movimento_elevador.v     ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_movimento_elevador.v   ;         ;
+; demux_1x4.v                      ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/demux_1x4.v                    ;         ;
+; mux_4x1.v                        ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_4x1.v                      ;         ;
+; abrir_e_fechar_porta.v           ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v         ;         ;
+; memoria_registradores.v          ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v        ;         ;
+; mux_2x1_2bits.v                  ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_2x1_2bits.v                ;         ;
+; memoria_ram.v                    ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v                  ;         ;
+; seletor_proximo_andar.v          ; yes             ; User Verilog HDL File  ; /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/seletor_proximo_andar.v        ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -208,32 +221,32 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------+
 ; Resource                                    ; Usage                                 ;
 +---------------------------------------------+---------------------------------------+
-; Total logic elements                        ; 44                                    ;
-;     -- Combinational with no register       ; 12                                    ;
+; Total logic elements                        ; 27                                    ;
+;     -- Combinational with no register       ; 1                                     ;
 ;     -- Register only                        ; 2                                     ;
-;     -- Combinational with a register        ; 30                                    ;
+;     -- Combinational with a register        ; 24                                    ;
 ;                                             ;                                       ;
 ; Logic element usage by number of LUT inputs ;                                       ;
-;     -- 4 input functions                    ; 11                                    ;
-;     -- 3 input functions                    ; 4                                     ;
-;     -- 2 input functions                    ; 1                                     ;
-;     -- 1 input functions                    ; 26                                    ;
+;     -- 4 input functions                    ; 2                                     ;
+;     -- 3 input functions                    ; 1                                     ;
+;     -- 2 input functions                    ; 0                                     ;
+;     -- 1 input functions                    ; 22                                    ;
 ;     -- 0 input functions                    ; 0                                     ;
 ;                                             ;                                       ;
 ; Logic elements by mode                      ;                                       ;
-;     -- normal mode                          ; 44                                    ;
+;     -- normal mode                          ; 27                                    ;
 ;     -- arithmetic mode                      ; 0                                     ;
 ;     -- qfbk mode                            ; 0                                     ;
 ;     -- register cascade mode                ; 0                                     ;
 ;     -- synchronous clear/load mode          ; 0                                     ;
 ;     -- asynchronous clear/load mode         ; 0                                     ;
 ;                                             ;                                       ;
-; Total registers                             ; 32                                    ;
-; I/O pins                                    ; 19                                    ;
+; Total registers                             ; 26                                    ;
+; I/O pins                                    ; 32                                    ;
 ; Maximum fan-out node                        ; divisor_frequencia:df|FF_jk:FF_jk11|q ;
-; Maximum fan-out                             ; 11                                    ;
-; Total fan-out                               ; 129                                   ;
-; Average fan-out                             ; 2.05                                  ;
+; Maximum fan-out                             ; 7                                     ;
+; Total fan-out                               ; 68                                    ;
+; Average fan-out                             ; 1.15                                  ;
 +---------------------------------------------+---------------------------------------+
 
 
@@ -242,21 +255,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                    ; Entity Name                             ; Library Name ;
 +-------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
-; |main                                                             ; 44 (0)      ; 32           ; 0          ; 19   ; 0            ; 12 (0)       ; 2 (0)             ; 30 (0)           ; 0 (0)           ; 0 (0)      ; |main                                                                                                                  ; main                                    ; work         ;
+; |main                                                             ; 27 (0)      ; 26           ; 0          ; 32   ; 0            ; 1 (0)        ; 2 (0)             ; 24 (0)           ; 0 (0)           ; 0 (0)      ; |main                                                                                                                  ; main                                    ; work         ;
 ;    |contagem_pessoas_no_elevador:contador_pessoas_elevador|       ; 3 (0)       ; 2            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador                                                           ; contagem_pessoas_no_elevador            ; work         ;
 ;       |FF_d:Y0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|FF_d:Y0                                                   ; FF_d                                    ; work         ;
 ;       |FF_d:Y1|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|FF_d:Y1                                                   ; FF_d                                    ; work         ;
 ;       |controle_quantidade_pessoas_no_elevador:control_quant_pes| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|contagem_pessoas_no_elevador:contador_pessoas_elevador|controle_quantidade_pessoas_no_elevador:control_quant_pes ; controle_quantidade_pessoas_no_elevador ; work         ;
-;    |controle_andares:controlAndares|                              ; 5 (1)       ; 2            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares                                                                                  ; controle_andares                        ; work         ;
-;       |FF_d:FlipFlop_Q0|                                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|FF_d:FlipFlop_Q0                                                                 ; FF_d                                    ; work         ;
-;       |FF_d:FlipFlop_Q1|                                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|FF_d:FlipFlop_Q1                                                                 ; FF_d                                    ; work         ;
-;       |comparador:comparar_andares|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|comparador:comparar_andares                                                      ; comparador                              ; work         ;
-;       |mux_2x1:mux_para_clock|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|controle_andares:controlAndares|mux_2x1:mux_para_clock                                                           ; mux_2x1                                 ; work         ;
-;    |debouce:comb_6|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6                                                                                                   ; debouce                                 ; work         ;
-;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_6|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
-;    |debouce:comb_7|                                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_7                                                                                                   ; debouce                                 ; work         ;
-;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:comb_7|FF_d:d0                                                                                           ; FF_d                                    ; work         ;
-;    |divisor_frequencia:df|                                        ; 26 (0)      ; 26           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 26 (0)           ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df                                                                                            ; divisor_frequencia                      ; work         ;
+;    |debouce:botao_adicionar_pessoa|                               ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:botao_adicionar_pessoa                                                                                   ; debouce                                 ; work         ;
+;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:botao_adicionar_pessoa|FF_d:d0                                                                           ; FF_d                                    ; work         ;
+;    |debouce:botao_subtrair_pessoa|                                ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:botao_subtrair_pessoa                                                                                    ; debouce                                 ; work         ;
+;       |FF_d:d0|                                                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|debouce:botao_subtrair_pessoa|FF_d:d0                                                                            ; FF_d                                    ; work         ;
+;    |divisor_frequencia:df|                                        ; 22 (0)      ; 22           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df                                                                                            ; divisor_frequencia                      ; work         ;
 ;       |FF_jk:FF_jk10|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk10                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk11|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk11                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk12|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk12                                                                              ; FF_jk                                   ; work         ;
@@ -271,10 +279,6 @@ https://fpgasoftware.intel.com/eula.
 ;       |FF_jk:FF_jk20|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk20                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk21|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk21                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk22|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk22                                                                              ; FF_jk                                   ; work         ;
-;       |FF_jk:FF_jk23|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk23                                                                              ; FF_jk                                   ; work         ;
-;       |FF_jk:FF_jk24|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk24                                                                              ; FF_jk                                   ; work         ;
-;       |FF_jk:FF_jk25|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk25                                                                              ; FF_jk                                   ; work         ;
-;       |FF_jk:FF_jk26|                                             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk26                                                                              ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk2|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk2                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk3|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk3                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk4|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk4                                                                               ; FF_jk                                   ; work         ;
@@ -283,26 +287,45 @@ https://fpgasoftware.intel.com/eula.
 ;       |FF_jk:FF_jk7|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk7                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk8|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk8                                                                               ; FF_jk                                   ; work         ;
 ;       |FF_jk:FF_jk9|                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|divisor_frequencia:df|FF_jk:FF_jk9                                                                               ; FF_jk                                   ; work         ;
-;    |gerenciar_display:gerenciandoDisplay|                         ; 8 (0)       ; 0            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay                                                                             ; gerenciar_display                       ; work         ;
-;       |mux_4x1:Mux_seg_a|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a                                                           ; mux_4x1                                 ; work         ;
-;       |mux_4x1:Mux_seg_b|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_b                                                           ; mux_4x1                                 ; work         ;
-;       |mux_4x1:Mux_seg_c|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_c                                                           ; mux_4x1                                 ; work         ;
-;       |mux_4x1:Mux_seg_d|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_d                                                           ; mux_4x1                                 ; work         ;
-;       |mux_4x1:Mux_seg_e|                                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_e                                                           ; mux_4x1                                 ; work         ;
-;       |mux_4x1:Mux_seg_f|                                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_f                                                           ; mux_4x1                                 ; work         ;
 +-------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; debouce:comb_7|FF_d:d1|Q              ; Stuck at GND due to stuck port data_in ;
-; debouce:comb_6|FF_d:d1|Q              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                             ;
++---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                                                         ; Reason for Removal                     ;
++---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; debouce:botao_confirmar_chamada|FF_d:d1|Q                                                                                             ; Stuck at GND due to stuck port data_in ;
+; debouce:botao_subtrair_pessoa|FF_d:d1|Q                                                                                               ; Stuck at GND due to stuck port data_in ;
+; debouce:botao_adicionar_pessoa|FF_d:d1|Q                                                                                              ; Stuck at GND due to stuck port data_in ;
+; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_terceiro_andar|FF_d:registar_Dados|Q ; Stuck at GND due to stuck port data_in ;
+; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_segundo_andar|FF_d:registar_Dados|Q  ; Stuck at GND due to stuck port data_in ;
+; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_primeiro_andar|FF_d:registar_Dados|Q ; Stuck at GND due to stuck port data_in ;
+; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_terreo|FF_d:registar_Dados|Q         ; Stuck at GND due to stuck port data_in ;
+; controle_andares:controlAndares|FF_d:FlipFlop_Q1|Q                                                                                    ; Stuck at GND due to stuck port data_in ;
+; controle_andares:controlAndares|FF_d:FlipFlop_Q0|Q                                                                                    ; Stuck at GND due to stuck port data_in ;
+; divisor_frequencia:df|FF_jk:FF_jk26|q                                                                                                 ; Lost fanout                            ;
+; divisor_frequencia:df|FF_jk:FF_jk25|q                                                                                                 ; Lost fanout                            ;
+; divisor_frequencia:df|FF_jk:FF_jk24|q                                                                                                 ; Lost fanout                            ;
+; divisor_frequencia:df|FF_jk:FF_jk23|q                                                                                                 ; Lost fanout                            ;
+; Total Number of Removed Registers = 13                                                                                                ;                                        ;
++---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                             ;
++----------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                      ; Reason for Removal        ; Registers Removed due to This Register                                                                                                 ;
++----------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; controle_andares:controlAndares|FF_d:FlipFlop_Q1|Q ; Stuck at GND              ; controle_andares:controlAndares|FF_d:FlipFlop_Q0|Q,                                                                                    ;
+;                                                    ; due to stuck port data_in ; divisor_frequencia:df|FF_jk:FF_jk26|q, divisor_frequencia:df|FF_jk:FF_jk25|q,                                                          ;
+;                                                    ;                           ; divisor_frequencia:df|FF_jk:FF_jk24|q, divisor_frequencia:df|FF_jk:FF_jk23|q                                                           ;
+; debouce:botao_confirmar_chamada|FF_d:d1|Q          ; Stuck at GND              ; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_terceiro_andar|FF_d:registar_Dados|Q, ;
+;                                                    ; due to stuck port data_in ; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_segundo_andar|FF_d:registar_Dados|Q,  ;
+;                                                    ;                           ; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_primeiro_andar|FF_d:registar_Dados|Q, ;
+;                                                    ;                           ; memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_terreo|FF_d:registar_Dados|Q          ;
++----------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -310,7 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
+; Total registers                              ; 26    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -403,15 +426,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "debouce:comb_6|FF_d:d1" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; D    ; Input ; Info     ; Explicitly unconnected   ;
-+------+-------+----------+--------------------------+
-
-
 +------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "controle_andares:controlAndares|mux_2x1:mux_para_clock" ;
 +------+-------+----------+----------------------------------------------------------+
@@ -419,6 +433,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+----------------------------------------------------------+
 ; b    ; Input ; Info     ; Stuck at GND                                             ;
 +------+-------+----------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controle_andares:controlAndares|mux_2x1:seletor_porta_abrir_fechar" ;
++------+-------+----------+----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                              ;
++------+-------+----------+----------------------------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                                         ;
++------+-------+----------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|mux_2x1:seletor_leitura_dados" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at GND                                                                                                  ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|demux_1x4:Seletor_escrita_dados" ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                         ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
+; E    ; Input ; Info     ; Stuck at VCC                                                                                                    ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|mux_2x1:seletor_escrita_dados" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                                                                                                     ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|contador_barra_de_leds:contar_5_1" ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                        ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+; out[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                            ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar|contador_barra_de_leds:contar_5_0" ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                        ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+; out[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                            ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contagem_pessoas_no_elevador:contador_pessoas_elevador|mux_2x1:permicao_subir" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "debouce:botao_adicionar_pessoa|FF_d:d1" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; D    ; Input ; Info     ; Explicitly unconnected                   ;
++------+-------+----------+------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -722,87 +808,134 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 27 10:24:36 2024
+    Info: Processing started: Sun Dec  1 12:54:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Sistema_Elevador -c Sistema_Elevador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file FF_d.v
-    Info (12023): Found entity 1: FF_d File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/FF_d.v Line: 5
+    Info (12023): Found entity 1: FF_d File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/FF_d.v Line: 5
 Info (12021): Found 2 design units, including 2 entities, in source file controle_andares.v
-    Info (12023): Found entity 1: controle_andares File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 5
-    Info (12023): Found entity 2: controle_proximo_andar File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 39
+    Info (12023): Found entity 1: controle_andares File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/controle_andares.v Line: 5
+    Info (12023): Found entity 2: controle_proximo_andar File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/controle_andares.v Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file display_andar.v
-    Info (12023): Found entity 1: display_andar File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_andar.v Line: 1
+    Info (12023): Found entity 1: display_andar File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_andar.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file FF_jk.v
-    Info (12023): Found entity 1: FF_jk File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/FF_jk.v Line: 5
+    Info (12023): Found entity 1: FF_jk File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/FF_jk.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 1
+    Info (12023): Found entity 1: main File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divisor_frequencia.v
-    Info (12023): Found entity 1: divisor_frequencia File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/divisor_frequencia.v Line: 7
+    Info (12023): Found entity 1: divisor_frequencia File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/divisor_frequencia.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
-    Info (12023): Found entity 1: comparador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/comparador.v Line: 9
+    Info (12023): Found entity 1: comparador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/comparador.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1.v
-    Info (12023): Found entity 1: mux_2x1 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/mux_2x1.v Line: 3
-Warning (12018): Entity "tff" will be ignored because it conflicts with Quartus Prime primitive name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/tff.v Line: 2
+    Info (12023): Found entity 1: mux_2x1 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_2x1.v Line: 3
+Warning (12018): Entity "tff" will be ignored because it conflicts with Quartus Prime primitive name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/tff.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tff.v
 Info (12021): Found 1 design units, including 1 entities, in source file debouce.v
-    Info (12023): Found entity 1: debouce File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/debouce.v Line: 3
+    Info (12023): Found entity 1: debouce File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/debouce.v Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file contagem_pessoas_no_elevador.v
-    Info (12023): Found entity 1: contagem_pessoas_no_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/contagem_pessoas_no_elevador.v Line: 4
-    Info (12023): Found entity 2: controle_quantidade_pessoas_no_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/contagem_pessoas_no_elevador.v Line: 22
+    Info (12023): Found entity 1: contagem_pessoas_no_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v Line: 4
+    Info (12023): Found entity 2: controle_quantidade_pessoas_no_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file display_pessoas.v
-    Info (12023): Found entity 1: display_pessoas File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_pessoas.v Line: 3
+    Info (12023): Found entity 1: display_pessoas File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_pessoas.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file gerenciar_display.v
-    Info (12023): Found entity 1: gerenciar_display File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v Line: 3
+    Info (12023): Found entity 1: gerenciar_display File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/gerenciar_display.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file display_movimento_elevador.v
-    Info (12023): Found entity 1: display_movimento_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/display_movimento_elevador.v Line: 1
+    Info (12023): Found entity 1: display_movimento_elevador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/display_movimento_elevador.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file demux_1x4.v
-    Info (12023): Found entity 1: demux_1x4 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/demux_1x4.v Line: 3
-    Info (12023): Found entity 2: demux_1x2 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/demux_1x4.v Line: 17
+    Info (12023): Found entity 1: demux_1x4 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/demux_1x4.v Line: 3
+    Info (12023): Found entity 2: demux_1x2 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/demux_1x4.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1.v
-    Info (12023): Found entity 1: mux_4x1 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/mux_4x1.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at contagem_pessoas_no_elevador.v(43): created implicit net for "DAY1Y" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/contagem_pessoas_no_elevador.v Line: 43
-Critical Warning (10846): Verilog HDL Instantiation warning at controle_andares.v(24): instance has no name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 24
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(28): instance has no name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 28
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(29): instance has no name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 29
+    Info (12023): Found entity 1: mux_4x1 File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_4x1.v Line: 1
+Info (12021): Found 3 design units, including 3 entities, in source file abrir_e_fechar_porta.v
+    Info (12023): Found entity 1: abrir_e_fechar_porta File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 3
+    Info (12023): Found entity 2: contador_barra_de_leds File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 48
+    Info (12023): Found entity 3: controle_ff_barra_leds File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 67
+Info (12021): Found 2 design units, including 2 entities, in source file memoria_registradores.v
+    Info (12023): Found entity 1: memoria_registradores File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v Line: 1
+    Info (12023): Found entity 2: registrador File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_2bits.v
+    Info (12023): Found entity 1: mux_2x1_2bits File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/mux_2x1_2bits.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file memoria_ram.v
+    Info (12023): Found entity 1: memoria_ram File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 1
+    Info (12023): Found entity 2: marcar_andar_como_visitado File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file seletor_proximo_andar.v
+    Info (12023): Found entity 1: seletor_proximo_andar File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/seletor_proximo_andar.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at contagem_pessoas_no_elevador.v(47): created implicit net for "DAY1Y" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at abrir_e_fechar_porta.v(63): created implicit net for "Saida" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 63
+Critical Warning (10846): Verilog HDL Instantiation warning at controle_andares.v(31): instance has no name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/controle_andares.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at memoria_ram.v(39): instance has no name File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 39
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "divisor_frequencia" for hierarchy "divisor_frequencia:df" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 10
-Info (12128): Elaborating entity "FF_jk" for hierarchy "divisor_frequencia:df|FF_jk:FF_jk1" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/divisor_frequencia.v Line: 20
-Info (12128): Elaborating entity "controle_andares" for hierarchy "controle_andares:controlAndares" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 19
-Info (12128): Elaborating entity "comparador" for hierarchy "controle_andares:controlAndares|comparador:comparar_andares" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 16
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "controle_andares:controlAndares|mux_2x1:mux_para_clock" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 22
-Info (12128): Elaborating entity "controle_proximo_andar" for hierarchy "controle_andares:controlAndares|controle_proximo_andar:comb_5" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 24
-Info (12128): Elaborating entity "FF_d" for hierarchy "controle_andares:controlAndares|FF_d:FlipFlop_Q1" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/controle_andares.v Line: 26
-Info (12128): Elaborating entity "debouce" for hierarchy "debouce:comb_6" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 28
-Info (12128): Elaborating entity "contagem_pessoas_no_elevador" for hierarchy "contagem_pessoas_no_elevador:contador_pessoas_elevador" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 32
-Info (12128): Elaborating entity "controle_quantidade_pessoas_no_elevador" for hierarchy "contagem_pessoas_no_elevador:contador_pessoas_elevador|controle_quantidade_pessoas_no_elevador:control_quant_pes" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/contagem_pessoas_no_elevador.v Line: 12
-Info (12128): Elaborating entity "demux_1x4" for hierarchy "demux_1x4:demux_selecionar_display" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 41
-Info (12128): Elaborating entity "demux_1x2" for hierarchy "demux_1x4:demux_selecionar_display|demux_1x2:d0" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/demux_1x4.v Line: 10
-Info (12128): Elaborating entity "gerenciar_display" for hierarchy "gerenciar_display:gerenciandoDisplay" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 52
-Info (12128): Elaborating entity "display_andar" for hierarchy "gerenciar_display:gerenciandoDisplay|display_andar:displayAndar" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v Line: 11
-Info (12128): Elaborating entity "display_movimento_elevador" for hierarchy "gerenciar_display:gerenciandoDisplay|display_movimento_elevador:display_movimento" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v Line: 14
-Info (12128): Elaborating entity "display_pessoas" for hierarchy "gerenciar_display:gerenciandoDisplay|display_pessoas:display_pessoas" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v Line: 18
-Info (12128): Elaborating entity "mux_4x1" for hierarchy "gerenciar_display:gerenciandoDisplay|mux_4x1:Mux_seg_a" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/gerenciar_display.v Line: 20
+Info (12128): Elaborating entity "divisor_frequencia" for hierarchy "divisor_frequencia:df" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 11
+Info (12128): Elaborating entity "FF_jk" for hierarchy "divisor_frequencia:df|FF_jk:FF_jk1" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/divisor_frequencia.v Line: 20
+Info (12128): Elaborating entity "abrir_e_fechar_porta" for hierarchy "abrir_e_fechar_porta:estado_porta" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 16
+Info (12128): Elaborating entity "contador_barra_de_leds" for hierarchy "abrir_e_fechar_porta:estado_porta|contador_barra_de_leds:contador_animacao_porta" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 10
+Warning (10036): Verilog HDL or VHDL warning at abrir_e_fechar_porta.v(63): object "Saida" assigned a value but never read File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 63
+Warning (10230): Verilog HDL assignment warning at abrir_e_fechar_porta.v(63): truncated value with size 3 to match size of target (1) File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 63
+Warning (10034): Output port "out" at abrir_e_fechar_porta.v(51) has no driver File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 51
+Info (12128): Elaborating entity "controle_ff_barra_leds" for hierarchy "abrir_e_fechar_porta:estado_porta|contador_barra_de_leds:contador_animacao_porta|controle_ff_barra_leds:controle_fft" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/abrir_e_fechar_porta.v Line: 57
+Info (12128): Elaborating entity "debouce" for hierarchy "debouce:botao_adicionar_pessoa" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 32
+Info (12128): Elaborating entity "FF_d" for hierarchy "debouce:botao_adicionar_pessoa|FF_d:d0" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/debouce.v Line: 9
+Info (12128): Elaborating entity "contagem_pessoas_no_elevador" for hierarchy "contagem_pessoas_no_elevador:contador_pessoas_elevador" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 37
+Info (12128): Elaborating entity "controle_quantidade_pessoas_no_elevador" for hierarchy "contagem_pessoas_no_elevador:contador_pessoas_elevador|controle_quantidade_pessoas_no_elevador:control_quant_pes" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v Line: 12
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "contagem_pessoas_no_elevador:contador_pessoas_elevador|mux_2x1:permicao_subir" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/contagem_pessoas_no_elevador.v Line: 16
+Info (12128): Elaborating entity "memoria_ram" for hierarchy "memoria_ram:gerenciar_memoria_elevador" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 40
+Info (12128): Elaborating entity "marcar_andar_como_visitado" for hierarchy "memoria_ram:gerenciar_memoria_elevador|marcar_andar_como_visitado:verifica_andar" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 12
+Info (12128): Elaborating entity "mux_2x1_2bits" for hierarchy "memoria_ram:gerenciar_memoria_elevador|mux_2x1_2bits:seletor_andar_gravar" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 14
+Info (12128): Elaborating entity "comparador" for hierarchy "memoria_ram:gerenciar_memoria_elevador|comparador:comparar_andar_registrar_com_atual" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 20
+Info (12128): Elaborating entity "memoria_registradores" for hierarchy "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 34
+Info (12128): Elaborating entity "demux_1x4" for hierarchy "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|demux_1x4:Seletor_escrita_dados" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v Line: 9
+Info (12128): Elaborating entity "demux_1x2" for hierarchy "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|demux_1x4:Seletor_escrita_dados|demux_1x2:d0" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/demux_1x4.v Line: 10
+Info (12128): Elaborating entity "registrador" for hierarchy "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|registrador:celula_terreo" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v Line: 23
+Info (12128): Elaborating entity "mux_4x1" for hierarchy "memoria_ram:gerenciar_memoria_elevador|memoria_registradores:celulas_memorias|mux_4x1:seletor_exibir_dados" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_registradores.v Line: 34
+Info (12128): Elaborating entity "seletor_proximo_andar" for hierarchy "memoria_ram:gerenciar_memoria_elevador|seletor_proximo_andar:comb_7" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/memoria_ram.v Line: 39
+Info (12128): Elaborating entity "controle_andares" for hierarchy "controle_andares:controlAndares" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 43
+Info (12128): Elaborating entity "controle_proximo_andar" for hierarchy "controle_andares:controlAndares|controle_proximo_andar:comb_7" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/controle_andares.v Line: 31
+Info (12128): Elaborating entity "gerenciar_display" for hierarchy "gerenciar_display:gerenciandoDisplay" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 66
+Info (12128): Elaborating entity "display_andar" for hierarchy "gerenciar_display:gerenciandoDisplay|display_andar:displayAndar" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/gerenciar_display.v Line: 11
+Info (12128): Elaborating entity "display_movimento_elevador" for hierarchy "gerenciar_display:gerenciandoDisplay|display_movimento_elevador:display_movimento" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/gerenciar_display.v Line: 14
+Info (12128): Elaborating entity "display_pessoas" for hierarchy "gerenciar_display:gerenciandoDisplay|display_pessoas:display_pessoas" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/gerenciar_display.v Line: 18
 Warning (12241): 29 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "p" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 5
-    Warning (13410): Pin "d3" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 5
-    Warning (13410): Pin "d4" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/main.v Line: 5
-Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 44 logic cells
-Info (144001): Generated suppressed messages file /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/output_files/Sistema_Elevador.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 347 megabytes
-    Info: Processing ended: Wed Nov 27 10:24:51 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:23
+    Warning (13410): Pin "a" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "d" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "e" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "g" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "p" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "d3" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "d4" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 6
+    Warning (13410): Pin "l0" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l1" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l2" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l3" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l4" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l5" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l6" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l7" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l8" is stuck at GND File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+    Warning (13410): Pin "l9" is stuck at VCC File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 5
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "btn_confirma" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 3
+    Warning (15610): No output dependent on input pin "chave1" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 2
+    Warning (15610): No output dependent on input pin "chave0" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 2
+    Warning (15610): No output dependent on input pin "chave3" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 2
+    Warning (15610): No output dependent on input pin "chave2" File: /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/main.v Line: 2
+Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 27 logic cells
+Info (144001): Generated suppressed messages file /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/output_files/Sistema_Elevador.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 350 megabytes
+    Info: Processing ended: Sun Dec  1 12:54:54 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-capacidade-pessoas-2.0/sistema elevador/output_files/Sistema_Elevador.map.smsg.
+The suppressed messages can be found in /home/lucas/codigos/uefs/mi circuitos digitais/sistema-elevador-main/sistema elevador/output_files/Sistema_Elevador.map.smsg.
 
 
