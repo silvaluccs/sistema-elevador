@@ -1,3 +1,5 @@
+// modulo do seletor do proximo andar, ele que informa a prioridade conforme as entradas atuais
+
 module seletor_proximo_andar(Q1, Q0, S, T, A1, A2, A3, andar);
  input Q1, Q0, S, T, A1, A2, A3;
  output [1:0] andar;

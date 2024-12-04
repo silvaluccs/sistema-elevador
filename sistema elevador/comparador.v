@@ -1,4 +1,4 @@
-// modulo do comparador universal
+// modulo do comparador universal que realiza operecoes relacionais
 // se G = 1 entao x > y
 // se G = 0 entao x <= y
 // se L = 1 entao x < y

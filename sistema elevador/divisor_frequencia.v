@@ -7,10 +7,10 @@
 module divisor_frequencia(clock_out, clock_debouce, clock_display, clock_entrada);
 	input clock_entrada;
 	output clock_out, clock_debouce;
-	output [1:0] clock_display;
+	output clock_display;
 	
 	
-	wire [25:0] clock_temp;
+	wire [27:0] clock_temp;
 	wire botao;
 	
 	assign botao = 1'b0;
@@ -42,11 +42,13 @@ module divisor_frequencia(clock_out, clock_debouce, clock_display, clock_entrada
 	FF_jk FF_jk23(.q(clock_temp[22]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[21]));
 	FF_jk FF_jk24(.q(clock_temp[23]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[22]));
 	FF_jk FF_jk25(.q(clock_temp[24]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[23]));
-	FF_jk FF_jk26(.q(clock_temp[25]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[24]));
+   FF_jk FF_jk26(.q(clock_temp[25]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[24]));
+	FF_jk FF_jk27(.q(clock_temp[26]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[25]));
+	FF_jk FF_jk28(.q(clock_temp[27]), .j(1'b1), .k(1'b1), .reset(botao), .clock(clock_temp[26]));
 	
 
-	assign clock_out = clock_temp[25];
-	assign clock_debouce = clock_temp[21];
-	assign clock_display = {clock_temp[11], clock_temp[10]};
+	assign clock_out = clock_temp[26];
+	assign clock_debouce = clock_temp[22];
+	assign clock_display = clock_temp[13];
 	
 endmodule	

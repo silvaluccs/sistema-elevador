@@ -9,6 +9,8 @@ module abrir_e_fechar_porta(control_port, clock_in, L0, L1, L2, L3, L4, L5, L6, 
  // contador para fazer a animacao
  contador_barra_de_leds contador_animacao_porta(control_port, clock_in, cont);
  
+ assign port_f = cont[2];
+ 
  wire L0_L9, L1_L8, L2_L7, L3_L6;
  
  // ligando os leds L0 e L9
@@ -40,7 +42,7 @@ module abrir_e_fechar_porta(control_port, clock_in, L0, L1, L2, L3, L4, L5, L6, 
  
  // indicadores de porta aberta e fechada
  not not0(port_a, L1);
- assign port_f = L4;
+ 
  
 endmodule
 
@@ -56,11 +58,11 @@ module contador_barra_de_leds(controle_porta, clock, out);
  // configurando o proximo estado do FF T
  controle_ff_barra_leds controle_fft(controle_porta, estado_proximo, atual_estado);
  
- tff contador_numero_0(.clk(clock), .t(atual_estado[0]), .q(estado_proximo[0]));
- tff contador_numero_1(.clk(clock), .t(atual_estado[1]), .q(estado_proximo[1]));
- tff contador_numero_2(.clk(clock), .t(atual_estado[2]), .q(estado_proximo[2]));
+ t_flipflop contador_numero_0(.clk(clock), .t(atual_estado[0]), .q(estado_proximo[0]));
+ t_flipflop contador_numero_1(.clk(clock), .t(atual_estado[1]), .q(estado_proximo[1]));
+ t_flipflop contador_numero_2(.clk(clock), .t(atual_estado[2]), .q(estado_proximo[2]));
  
- assign Saida = estado_proximo;
+ assign out = estado_proximo;
  
 endmodule 
 

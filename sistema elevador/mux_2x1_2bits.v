@@ -1,3 +1,5 @@
+// modulo responsavel pelo mux_2x1 com dois bits
+
 module mux_2x1_2bits(a, b, sel, out);
  input [1:0] a;
  input [1:0] b;

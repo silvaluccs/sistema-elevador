@@ -1,3 +1,5 @@
+// modulo responsavel pelo mux 4x1
+
 module mux_4x1(a, b, c, d, sel, out);
   input a, b, c, d;
   input [1:0] sel;

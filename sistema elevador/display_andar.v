@@ -1,3 +1,5 @@
+// modulo responsavel por configurar os segmentos para exibir o andar no mostrador de 7 segmentos
+
 module display_andar(andar, a, b, c, d, e, f, g);
  input [1:0] andar;
  output a, b, c, d, e, f, g;

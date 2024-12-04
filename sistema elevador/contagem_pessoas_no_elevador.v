@@ -23,6 +23,8 @@ module contagem_pessoas_no_elevador(clock, botao_subir, botao_descer, porta_aber
  
 endmodule
 
+// modulo de controle para o proximo estado
+
 module controle_quantidade_pessoas_no_elevador(entrada, saida, botao_sub, botao_des, Sinalalerta);
  input [1:0] entrada;
  input botao_sub, botao_des;

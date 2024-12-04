@@ -25,6 +25,7 @@ module memoria_registradores(endereco, escrita, dado, saida_endereco, terreo, pr
  registrador celula_segundo_andar(dado, registrar_na_celula_segundo_andar, s_2);
  registrador celula_terceiro_andar(dado, registrar_na_celula_terceiro_andar, s_3);
  
+ // saidas em pararelo
  assign terreo = s_terreo;
  assign primeiro_andar = s_1;
  assign segundo_andar = s_2;
@@ -34,15 +35,15 @@ module memoria_registradores(endereco, escrita, dado, saida_endereco, terreo, pr
  mux_4x1 seletor_exibir_dados(s_terreo, s_1, s_2, s_3, endereco, dado_endereco);
  
  not Not0(leitura, escrita);
- 
+ // selecionando o dado do endereco atual do elevador
  mux_2x1 seletor_leitura_dados(1'b0, dado_endereco, leitura, saida_endereco);
  
  endmodule
 
- 
+ // modulo do registrador
 module registrador(dados_in, permitir_escrever, saida);
  input dados_in, permitir_escrever;
  output saida;
  
-FF_d registar_Dados(saida, permitir_escrever, saida);
+FF_d registar_Dados(saida, permitir_escrever, dados_in);
 endmodule 

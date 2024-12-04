@@ -14,6 +14,7 @@ module controle_andares(andar, seletor_andar, clock_in, porta_fechada, pessoa_pa
  
  wire G, L, controleSubidaDescida, or_G_L, clock, permitir_movimento;
  
+ // comparando se sera necessario subir ou descer o elevadir
  comparador comparar_andares(G, L, seletor_andar, proximoAndar);
  
  assign controleSubidaDescida = G;
@@ -21,12 +22,14 @@ module controle_andares(andar, seletor_andar, clock_in, porta_fechada, pessoa_pa
  wire not_pessoa_para_descer;
  not Not0(not_pessoa_para_descer, pessoa_para_descer);
  
- nor Or0(or_G_L, G, L);
+ // permitindo o movimento do elevador
+ or Or0(or_G_L, G, L);
  and And0(permitir_movimento, not_pessoa_para_descer, or_G_L, porta_fechada);
  
+ // controle da porta
  mux_2x1 seletor_porta_abrir_fechar(or_G_L, 1'b0, pessoa_para_descer, abrir_fechar_porta);
  
- mux_2x1 mux_para_clock(clock_in, 1'b0, permitir_movimento, clock);
+ mux_2x1 mux_para_clock(1'b0, clock_in, permitir_movimento, clock);
  
  controle_proximo_andar(andarAtual, proximoAndar, controleSubidaDescida);
  
@@ -34,8 +37,8 @@ module controle_andares(andar, seletor_andar, clock_in, porta_fechada, pessoa_pa
  FF_d FlipFlop_Q0(proximoAndar[0], clock, andarAtual[0]);
  
  assign andar = proximoAndar;
- assign S = controleSubidaDescida;
- assign P = permitir_movimento;
+ assign S = G;
+ assign P = ~permitir_movimento;
  
 endmodule
 
